@@ -1,0 +1,16 @@
+baseURL: http://thesystemicprogrammer.org
+languageCode: en-us
+title: The Systemic Programmer
+theme: tsp
+
+menu:
+  main:
+    - name: Blog
+      url: /blog
+
+    - name: About
+      url: /about
+
+params:
+  author: Thomas Berchtold
+  authorImage: /images/thomas.webp

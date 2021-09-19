@@ -1,0 +1,34 @@
+<header>
+    <nav class="navbar has-shadow is-primary is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/" aria-label="Return to homepage">
+                    <i class="fas is-size-4 fa-cogs"></i>
+                    <span class="is-size-4 has-text-weight-bold is-family-primary" style="letter-spacing: -0.05rem;">{{ .Site.Title }}</span>
+                    {{/*  <span class="logo"><h1>{{ .Site.Title }}</h1></span>  */}}
+                </a>
+    
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="tsp-navbar">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+    
+            <div id="tsp-navbar" class="navbar-menu">
+            
+                <div class="navbar-end">
+                    {{ range .Site.Menus.main }}
+                    <a href="{{ .URL }}" class="navbar-item has-text-weight-semibold">{{ .Name }}</a>
+                    {{ end }}
+                   
+                    <a class="navbar-item has-text-weight-semibold" href="/search" aria-label="Search blog">  
+                        <i class="fas fa-lg fa-search"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+</header>

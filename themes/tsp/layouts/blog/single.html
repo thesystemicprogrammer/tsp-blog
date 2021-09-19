@@ -1,0 +1,46 @@
+{{ define "main" }}
+<div class="container">
+    <section class="section mt-6">
+        <article>
+            <h1 class="title is-2">{{ .Title }}</h1>
+            {{ with .Params.subtitle }}
+            <h2 class="subtitle is-3">{{ . }}</h1>
+            {{ end }}
+
+            <div class="title subtitle heading is-6 mt-3">
+                <div class="columns is-vcentered is-mobile">
+                    {{ with .Site.Params.AuthorImage }}
+                    <div class="column is-narrow">
+                        <img src="{{ . }}" class="author-image mt-2">
+                    </div>
+                    {{ end }}
+                    <div class="column is-vcentered">
+                        <p class="mb-2">{{ .Site.Params.Author }}</p>
+                        <p>
+                            <time><i class="far fa-calendar"></i>{{ .PublishDate.Format "January 2, 2006" }}</time>
+                            <i class="far fa-clock ml-2"></i> {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes {{ end }}
+                            <i class="far fa-eye ml-2"></i> 
+                            {{ $views := index .Site.Data.pageviews .RelPermalink }}
+                            {{ if lt $views 20 }}
+                            less than 20
+                            {{ else }}
+                            {{ $views }}
+                            {{ end }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                {{ range .Params.categories }}
+                <a href="{{ "categories/" | relURL }}{{ . | urlize }}"><span class="tag is-link">{{ . }}</span></a>
+                {{ end }}
+              </div>
+        
+            <div class="content mt-6">
+                {{ .Content }}
+            </div>
+        </article>
+    </section>
+</div>
+{{ end }}

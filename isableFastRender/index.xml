@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sample on The Systemic Programmer</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Sample on The Systemic Programmer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Sep 2021 22:51:53 +0200</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 19 Sep 2021 00:18:41 +0200</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description>Hi, I am Thomas Berchtold.  I have been working in the software industry for over 20 years in various roles such as programmer, designer, architect or requirements engineer. Currently I am working as a software engineer/coach/architect in transformation projects with a focus on the definition and implementation of cloud native architectures as well as the enabling of teams on new methods and technologies.  While I still love to code, I am particularly passionate about the social aspects of software engineering.</description>
+    </item>
+    
+    <item>
+      <title>Contact Information</title>
+      <link>http://localhost:1313/legal/contact/</link>
+      <pubDate>Sat, 18 Sep 2021 21:12:44 +0200</pubDate>
+      
+      <guid>http://localhost:1313/legal/contact/</guid>
+      <description> This website is is owned and administrated by:  Thomas Berchtold Weier 208 CH-3664 Burgistein Switzerland  info@thesystemicprogrammer.org </description>
+    </item>
+    
+    <item>
+      <title>Copyright Notice</title>
+      <link>http://localhost:1313/legal/copyright/</link>
+      <pubDate>Sat, 18 Sep 2021 21:12:44 +0200</pubDate>
+      
+      <guid>http://localhost:1313/legal/copyright/</guid>
+      <description>  Copyright (c) 2021 Thomas Berchtold. This website is licensed under CC BY-NC-SA 4.0  except otherwise noted. Material for which I do not own the copyright (like images or fair-use parts) and which are therefore not covered by this license are marked accordingly.
+Program code and code snippets are licensed under The MIT license. </description>
+    </item>
+    
+    <item>
+      <title>Disclaimer</title>
+      <link>http://localhost:1313/legal/disclaimer/</link>
+      <pubDate>Sat, 18 Sep 2021 21:12:44 +0200</pubDate>
+      
+      <guid>http://localhost:1313/legal/disclaimer/</guid>
+      <description>Last updated: September 18, 2021
+Interpretation and Definitions Interpretation The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural. Definitions For the purposes of this Disclaimer:  Service refers to the Website. You means the individual accessing the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>http://localhost:1313/legal/privacy/</link>
+      <pubDate>Sat, 18 Sep 2021 21:12:44 +0200</pubDate>
+      
+      <guid>http://localhost:1313/legal/privacy/</guid>
+      <description>Last updated: September 19, 2021
+Introduction I am committed to safeguarding the privacy of my website visitors. This policy applies where I am acting as a data controller with respect to the personal data of my website visitors; in other words, where I determine the purposes and means of the processing of that personal data. In this policy, &#34;I&#34;, &#34;me&#34; and &#34;my&#34; refer to Thomas Berchtold. For more information about me, see Contact Information</description>
+    </item>
+    
+    <item>
+      <title>Reactive Programming Performance</title>
+      <link>http://localhost:1313/blog/2021/reactive/</link>
+      <pubDate>Sat, 18 Sep 2021 21:12:44 +0200</pubDate>
+      
+      <guid>http://localhost:1313/blog/2021/reactive/</guid>
+      <description>&lt;p&gt;One key characteristics of a reactive system is its responsiveness. Let&amp;rsquo;s figure out if there is a difference in responsiveness between the Spring Boot servlet and reactive stack.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
