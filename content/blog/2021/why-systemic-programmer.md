@@ -1,15 +1,15 @@
 ---
-title: "Reactive Programming Performance"
-subtitle: "How performant is the reactive stack of SpringBoot compared to its servlet stack?"
-date: 2021-09-18T21:12:44+02:00
-description: Compare the performance of the servlet with the reactive stack of SpringBoot
+title: "Why is this page called The Systemic Programmer"
+date: 2021-09-20T21:13:15+02:00
+description: 
 categories:
-    - Reactive
-    - Spring Boot
-draft: false
+    - Systems Thinking
+draft: true
 ---
 
-One key characteristics of a reactive system is its responsiveness. Let's figure out if there is a difference in responsiveness between the Spring Boot servlet and reactive stack.
+It might seem a dichotomy to mix the analytical tasks of programming with the holistic view of systems thinking together in 
+the title of my website. However, I think that software engineering is a very social profession and hence the systemic approaches can be very helpful to create better results. 
+
 <!--more-->
 
 ## What is Lorem Ipsum?

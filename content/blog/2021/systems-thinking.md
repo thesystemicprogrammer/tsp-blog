@@ -1,15 +1,13 @@
 ---
-title: "Reactive Programming Performance"
-subtitle: "How performant is the reactive stack of SpringBoot compared to its servlet stack?"
-date: 2021-09-18T21:12:44+02:00
-description: Compare the performance of the servlet with the reactive stack of SpringBoot
+title: "What is Systems Thinking"
+date: 2021-09-20T21:13:15+02:00
+description: What is actually the meaning of Systems Thinking
 categories:
-    - Reactive
-    - Spring Boot
-draft: false
+    - Systems Thinking
+draft: true
 ---
 
-One key characteristics of a reactive system is its responsiveness. Let's figure out if there is a difference in responsiveness between the Spring Boot servlet and reactive stack.
+This websites talk a lot about Systems Thinking and systemic approaches. But what is actually the meaning of this terms and what are the specific characteristics.  
 <!--more-->
 
 ## What is Lorem Ipsum?

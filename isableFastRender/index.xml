@@ -8,6 +8,25 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 17 Sep 2021 22:51:53 +0200</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>What is Systems Thinking</title>
+      <link>http://localhost:1313/blog/2021/systems-thinking/</link>
+      <pubDate>Mon, 20 Sep 2021 21:13:15 +0200</pubDate>
+      
+      <guid>http://localhost:1313/blog/2021/systems-thinking/</guid>
+      <description>&lt;p&gt;This websites talk a lot about Systems Thinking and systemic approaches. But what is actually the meaning of this terms and what are the specific characteristics.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Why is this page called The Systemic Programmer</title>
+      <link>http://localhost:1313/blog/2021/why-systemic-programmer/</link>
+      <pubDate>Mon, 20 Sep 2021 21:13:15 +0200</pubDate>
+      
+      <guid>http://localhost:1313/blog/2021/why-systemic-programmer/</guid>
+      <description>&lt;p&gt;It might seem a dichotomy to mix the analytical tasks of programming with the holistic view of systems thinking together in
+the title of my website. However, I think that software engineering is a very social profession and hence the systemic approaches can be very helpful to create better results.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>About me</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Sun, 19 Sep 2021 00:18:41 +0200</pubDate>

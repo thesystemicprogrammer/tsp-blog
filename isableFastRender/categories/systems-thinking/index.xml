@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog Post List on The Systemic Programmer</title>
-    <link>http://localhost:1313/blog/</link>
-    <description>Recent content in Blog Post List on The Systemic Programmer</description>
+    <title>Systems Thinking on The Systemic Programmer</title>
+    <link>http://localhost:1313/categories/systems-thinking/</link>
+    <description>Recent content in Systems Thinking on The Systemic Programmer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Sep 2021 21:12:44 +0200</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Sep 2021 21:13:15 +0200</lastBuildDate><atom:link href="http://localhost:1313/categories/systems-thinking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is Systems Thinking</title>
       <link>http://localhost:1313/blog/2021/systems-thinking/</link>
@@ -24,15 +24,6 @@
       <guid>http://localhost:1313/blog/2021/why-systemic-programmer/</guid>
       <description>&lt;p&gt;It might seem a dichotomy to mix the analytical tasks of programming with the holistic view of systems thinking together in
 the title of my website. However, I think that software engineering is a very social profession and hence the systemic approaches can be very helpful to create better results.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Reactive Programming Performance</title>
-      <link>http://localhost:1313/blog/2021/reactive/</link>
-      <pubDate>Sat, 18 Sep 2021 21:12:44 +0200</pubDate>
-      
-      <guid>http://localhost:1313/blog/2021/reactive/</guid>
-      <description>&lt;p&gt;One key characteristics of a reactive system is its responsiveness. Let&amp;rsquo;s figure out if there is a difference in responsiveness between the Spring Boot servlet and reactive stack.&lt;/p&gt;</description>
     </item>
     
   </channel>

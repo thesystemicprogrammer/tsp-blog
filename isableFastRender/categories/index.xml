@@ -6,7 +6,16 @@
     <description>Recent content in Categories on The Systemic Programmer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Sep 2021 21:12:44 +0200</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Sep 2021 21:13:15 +0200</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Systems Thinking</title>
+      <link>http://localhost:1313/categories/systems-thinking/</link>
+      <pubDate>Mon, 20 Sep 2021 21:13:15 +0200</pubDate>
+      
+      <guid>http://localhost:1313/categories/systems-thinking/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Reactive</title>
       <link>http://localhost:1313/categories/reactive/</link>

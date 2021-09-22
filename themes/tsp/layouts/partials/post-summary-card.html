@@ -1,0 +1,13 @@
+{{ $permalink := .Permalink }}
+<div class="card mb-6">
+    <div class="card-content">
+        <a class="title is-4" href="{{ .Permalink }}">{{ .Title }}</a>
+        <span class="heading mt-1">{{ .Site.Params.Author }} | <time>{{ .PublishDate.Format "January 2, 2006"}}</time></span>
+        {{ range .Params.categories }}
+        <a href="{{ "categories/" | relURL }}{{ . | urlize }}"><span class="tag is-link">{{ . }}</span></a>
+        {{ end }}
+        <div class="content mt-3">
+            {{ .Summary }}
+        </div>
+    </div>
+</div>

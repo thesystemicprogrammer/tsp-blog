@@ -13,37 +13,37 @@
       <pubDate>Sat, 18 Sep 2021 21:12:44 +0200</pubDate>
       
       <guid>http://localhost:1313/legal/contact/</guid>
-      <description> This website is is owned and administrated by:  Thomas Berchtold Weier 208 CH-3664 Burgistein Switzerland  thomasb@thesystemicprogrammer.org </description>
+      <description> This website is is owned and administrated by:  Thomas Berchtold Weier 208 CH-3664 Burgistein Switzerland  info@thesystemicprogrammer.org </description>
     </item>
     
     <item>
       <title>Copyright Notice</title>
       <link>http://localhost:1313/legal/copyright/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 18 Sep 2021 21:12:44 +0200</pubDate>
       
       <guid>http://localhost:1313/legal/copyright/</guid>
-      <description> Copyright Notice  Copyright (c) 2019 Thomas Berchtold. This website is licensed under CC BY-NC-SA 4.0  except otherwise noted. Material for which I do not own the copyright (like images or fair-use parts) and which are therefore not covered by this license are marked accordingly.
+      <description>  Copyright (c) 2021 Thomas Berchtold. This website is licensed under CC BY-NC-SA 4.0  except otherwise noted. Material for which I do not own the copyright (like images or fair-use parts) and which are therefore not covered by this license are marked accordingly.
 Program code and code snippets are licensed under The MIT license. </description>
     </item>
     
     <item>
       <title>Disclaimer</title>
       <link>http://localhost:1313/legal/disclaimer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 18 Sep 2021 21:12:44 +0200</pubDate>
       
       <guid>http://localhost:1313/legal/disclaimer/</guid>
-      <description>Disclaimer Last updated: {{ page.updated | date: &#34;%B %-d, %Y&#34; }}
+      <description>Last updated: September 18, 2021
 Interpretation and Definitions Interpretation The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural. Definitions For the purposes of this Disclaimer:  Service refers to the Website. You means the individual accessing the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</description>
     </item>
     
     <item>
       <title>Privacy Policy</title>
       <link>http://localhost:1313/legal/privacy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 18 Sep 2021 21:12:44 +0200</pubDate>
       
       <guid>http://localhost:1313/legal/privacy/</guid>
-      <description>Privacy Policy Last updated: {{ page.updated | date: &#34;%B %-d, %Y&#34; }}
-Introduction I am committed to safeguarding the privacy of my website visitors. This policy applies where I am acting as a data controller with respect to the personal data of my website visitors; in other words, where I determine the purposes and means of the processing of that personal data. In this policy, &#34;I&#34;, &#34;me&#34; and &#34;my&#34; refer to Thomas Berchtold.</description>
+      <description>Last updated: September 19, 2021
+Introduction I am committed to safeguarding the privacy of my website visitors. This policy applies where I am acting as a data controller with respect to the personal data of my website visitors; in other words, where I determine the purposes and means of the processing of that personal data. In this policy, &#34;I&#34;, &#34;me&#34; and &#34;my&#34; refer to Thomas Berchtold. For more information about me, see Contact Information</description>
     </item>
     
   </channel>
