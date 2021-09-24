@@ -8,8 +8,18 @@ menu:
     - name: Blog
       url: /blog
 
-    - name: About
-      url: /about
+    - name: Categories
+      url: /categories
+
+related:
+  threshold: 0 
+  includeNewer: true
+  toLower: false
+  indices:
+  - name: "categories"
+    weight: 100
+  - name: "date"
+    weight: 10
 
 params:
   author: Thomas Berchtold

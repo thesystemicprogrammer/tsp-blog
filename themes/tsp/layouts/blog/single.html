@@ -42,5 +42,23 @@
             </div>
         </article>
     </section>
+    <section class="section">
+        <hr>
+        <div class="columns is-centered">
+            <div class="column">
+                <div class="content">
+                    <h3>Related content:</h3>
+                </div>
+                <div class="columns">
+                    {{ $related := (where (.Site.RegularPages.Related .) "Type" "blog") | first 3 }}
+                    {{ range $related }}
+                    <div class="column is-one-third">
+                        {{ partial "post-summary-card-small.html" . }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 {{ end }}

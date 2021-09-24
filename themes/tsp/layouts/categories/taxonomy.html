@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="container">
+    <div class="section mt-6">
+        <h1 class="title is-2">Blog Posts for Category "{{ .Title }}"</h1>
+        {{ .Content }}
+        <div class="content">
+        <div class="columns">
+            <div class="column is-6 mr-4">
+            {{ range $elem_index, $elem_val := .Paginator.Pages }}
+                {{ if (modBool $elem_index 2) }}
+                    {{ partial "post-summary-card.html" $elem_val }}
+                {{ end }}
+            {{ end }}
+            </div>
+            <div class="column is-6 ml-4">
+            {{ range $elem_index, $elem_val := .Paginator.Pages }}
+                {{ if not (modBool $elem_index 2) }}
+                    {{ partial "post-summary-card.html" $elem_val }}
+                {{ end }}
+            {{ end }}
+            </div>
+        </div>
+        {{ partial "pagination.html" . }}  
+    </div>
+</div>
+{{ end }}
