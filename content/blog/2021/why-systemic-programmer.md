@@ -2,7 +2,7 @@
 title: "Why is this page called The Systemic Programmer"
 date: 2021-09-20T21:13:15+02:00
 description: 
-categories:
+topics:
     - Systems Thinking
 draft: true
 ---

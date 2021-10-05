@@ -1,0 +1,8 @@
+{{- if in site.Params.searchSections .Type -}}
+    {{- $entry := dict "uri" .RelPermalink "title" .Title -}}
+    {{- $entry = merge $entry (dict "content" (.Plain | htmlUnescape)) -}}
+    {{- $entry = merge $entry (dict "description" .Description) -}}
+    {{- $entry = merge $entry (dict "topic" .Params.topics) -}}
+    {{- $entry = merge $entry (dict "tags" .Params.tags) -}}
+    {{- $entry | jsonify -}}
+{{- end -}}

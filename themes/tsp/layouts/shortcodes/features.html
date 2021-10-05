@@ -1,0 +1,28 @@
+<section class="section">
+    <div class="container has-text-centered">
+        <h1 class="is-size-2">Main Blocks of this Homepage</h1>
+        <div class="columns is-multiline" style="margin-top:3rem; margin-left: 4vw;">
+            {{ range .Site.Data.features.features }}
+                <div class="column is-half mb-4">
+                    <div class="media">
+                        <div class="media-left" style="margin-top:-0.9rem">
+                            <a href="/{{ .url }}" aria-label="{{ .aria_label }}">
+                                <i class="{{ .icon }} has-text-link" style="font-size: 3.5rem;"></i>
+                            </a>
+                        </div>
+                        <div class="media-content">
+                            <div class="content has-text-left">
+                                <a href="/{{ .url }}">
+                                    <div class="is-size-4 has-text-weight-bold">{{.header}}</div>
+                                </a>
+                                <p class="is-size-5">
+                                    {{.text}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}       
+        </div>
+    </div>
+</section>

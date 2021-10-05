@@ -2,7 +2,7 @@
 title: "What is Systems Thinking"
 date: 2021-09-20T21:13:15+02:00
 description: What is actually the meaning of Systems Thinking
-categories:
+topics:
     - Systems Thinking
 draft: true
 ---

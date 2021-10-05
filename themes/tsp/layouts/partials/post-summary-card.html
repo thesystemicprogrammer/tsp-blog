@@ -3,8 +3,10 @@
     <div class="card-content">
         <a class="title is-4" href="{{ .Permalink }}">{{ .Title }}</a>
         <span class="heading mt-1">{{ .Site.Params.Author }} | <time>{{ .PublishDate.Format "January 2, 2006"}}</time></span>
-        {{ range .Params.categories }}
-        <a href="{{ "categories/" | relURL }}{{ . | urlize }}"><span class="tag is-link is-light">{{ . }}</span></a>
+        {{ $topic := index (.Params.topics) 0 }}
+        <a class="mr-4" href="{{ "topics/" | relURL }}{{ $topic | urlize }}"><span class="tag is-success is-light">{{ $topic }}</span></a>
+        {{ range .Params.tags }}
+        <a href="{{ "tags/" | relURL }}{{ . | urlize }}"><span class="tag is-link is-light">{{ . }}</span></a>
         {{ end }}
         <div class="content mt-3">
             {{ .Summary }}

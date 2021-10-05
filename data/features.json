@@ -1,0 +1,46 @@
+{
+  "features": [
+    {
+      "icon": "fas fa-server",
+      "header": "Software Engineering",
+      "text": "Find articles on topics such as methodologies, architecture, design or development.",
+      "aria_label": "List of postings under the topic Blog",
+      "url": "/topics/software-engineering"
+    },
+    {
+      "icon": "fas fa-atom-solid",
+      "header": "Systemic Thinking",
+      "text": "Discussion of systemic concepts and approaches and how we can use them in the domain of software engineering.",
+      "aria_label": "List of postings under the topic Systemic Thinking",
+      "url": "topics/systems-thinking"
+    },
+    {
+      "icon": "fas fa-screwdriver-wrench-solid",
+      "header": "Practice",
+      "text": "Learning sessions, hands-on examples, or experience reports on a variety of topics like AWS, JAVA, Docker, Kubernetes, and many more).",
+      "aria_label": "List of postings under the topic Lab",
+      "url": "topics/practice"
+    },
+    {
+      "icon": "fas fa-graduation-cap",
+      "header": "Pathways",
+      "text": "A series of related blog posts that covers a particular topic in detail and depth.",
+      "aria_label": "Series of related blog posts",
+      "url": "topics/pathways"
+    },
+    {
+      "icon": "fas fa-doc-text",
+      "header": "Software",
+      "text": "Documentation of small personal software projects, some already started, others only just in the planning stage.",
+      "aria_label": "Documentation of my personal software projects",
+      "url": "motivation"
+    },
+    {
+      "icon": "fas fa-rocket",
+      "header": "Why systemic?",
+      "text": "Learn more about the motivation why this page is called \"The Systemic Programmer\"",
+      "aria_label": "Learn why this page is called The Systemic Programmer",
+      "url": "motivation"
+    }
+  ]
+}

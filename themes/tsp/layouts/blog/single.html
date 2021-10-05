@@ -1,6 +1,10 @@
 {{ define "main" }}
+{{ $topic := index (.Params.topics) 0 }}
+{{ if  .Site.Params.showHeroForSinglePost }}
+    {{ partial "hero.html" (dict "context" $.Page "defaultimage" (index site.Data.categoryimage $topic))}}
+{{ end }}
 <div class="container">
-    <section class="section mt-6">
+    <section class="section {{ if (not .Site.Params.showHeroForSinglePost) }}mt-5{{ end }}">
         <article>
             <h1 class="title is-2">{{ .Title }}</h1>
             {{ with .Params.subtitle }}
@@ -32,7 +36,8 @@
             </div>
 
             <div>
-                {{ range .Params.categories }}
+                <a class="mr-4" href="{{ "topics/" | relURL }}{{ $topic | urlize }}"><span class="tag is-success">{{ $topic }}</span></a>
+                {{ range .Params.tags }}
                 <a href="{{ "categories/" | relURL }}{{ . | urlize }}"><span class="tag is-link">{{ . }}</span></a>
                 {{ end }}
               </div>
@@ -60,5 +65,13 @@
             </div>
         </div>
     </section>
+    <section class="section mb-5">
+        <hr>
+        <div class="content">
+            <h3>Leave a comment:</h3>
+        </div>
+</script>
+    </section>
 </div>
+
 {{ end }}

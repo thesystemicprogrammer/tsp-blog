@@ -1,7 +1,10 @@
 {{ define "main" }}
+{{ with .Title }}
+    {{ partial "hero.html" (dict "context" $.Page "defaultimage" (index site.Data.categoryimage .))}}
+{{ end }}
 <div class="container">
-    <div class="section mt-6">
-        <h1 class="title is-2">Blog Posts for Category "{{ .Title }}"</h1>
+    <div class="section">
+        <h1 class="title is-2">Posts for {{ .Data.Singular | title }} "{{ .Title }}"</h1>
         {{ .Content }}
         <div class="content">
         <div class="columns">

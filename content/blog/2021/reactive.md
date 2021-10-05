@@ -3,7 +3,9 @@ title: "Reactive Programming Performance"
 subtitle: "How performant is the reactive stack of SpringBoot compared to its servlet stack?"
 date: 2021-09-18T21:12:44+02:00
 description: Compare the performance of the servlet with the reactive stack of SpringBoot
-categories:
+topics:
+    - Practice
+tags:
     - Reactive
     - Spring Boot
 draft: false

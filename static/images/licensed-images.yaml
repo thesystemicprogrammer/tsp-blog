@@ -1,0 +1,91 @@
+  road: 
+    image: road
+    author-name: jodeng
+    author-link: https://pixabay.com/de/users/jodeng-8071896/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3186188
+    company-name: Pixabay
+    company-link: https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3186188
+    license: pixabay
+  paragraph:
+    image: paragraph
+    author-name: Gerd Altmann
+    author-link: https://pixabay.com/de/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67400
+    company-name: Pixabay
+    company-link: https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67400
+    license: pixabay
+  error-404:
+    image: error-404
+    author-name: Andrew Martin
+    author-link: https://pixabay.com/de/users/aitoff-388338/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2129569
+    company-name: Pixabay
+    company-link: https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2129569
+    license: pixabay
+  telescope:
+    image: telescope
+    author-name: S. Hermann &amp; F. Richter
+    author-link: https://pixabay.com/de/users/pixel2013-2364555/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3672029
+    company-name: Pixabay
+    company-link: https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3672029
+    license: pixabay
+  typewriter:
+    image: typewriter
+    author-name: Hannibal Height
+    author-link: https://pixabay.com/de/users/Hannibal8height-2964991/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1700787
+    company-name: Pixabay
+    company-link: https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1700787
+    license: pixabay
+  library:
+    image: library
+    author-name: Trnava University
+    author-link: https://unsplash.com/@trnavskauni?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+    company-name: Unspalsh
+    company-link: https://unsplash.com/s/photos/library?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+    license: unsplash
+  archive:
+      image: archive
+      author-name: kropekk_pl
+      author-link: https://pixabay.com/de/users/kropekk_pl-114936/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=283251
+      company-name: Pixaby
+      company-link: https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=283251
+      license: pixabay
+  folders:
+      image: folders
+      author-name: Gino Crescoli
+      author-link: https://pixabay.com/de/users/absolutvision-6158753/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2654130
+      company-name: Pixaby
+      company-link: https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2654130
+      license: pixabay
+  code:
+    image: code
+    author-name: James Osborne
+    author-link: https://pixabay.com/de/users/jamesmarkosborne-1640589/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1076536
+    company-name: Pixaby
+    company-link: https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1076536
+    license: pixabay
+  net:
+    image: net
+    author-name: Uriel SC
+    author-link: https://unsplash.com/@urielsc26?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+    company-name: Unsplash
+    company-link: https://unsplash.com/s/photos/network?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+    license: unsplash
+  net:
+    image: net
+    author-name: Uriel SC
+    author-link: https://unsplash.com/@urielsc26?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+    company-name: Unsplash
+    company-link: https://unsplash.com/s/photos/network?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+    license: unsplash
+  cogs:
+    image: cogs
+    author-name: Bill Oxford
+    author-link: https://unsplash.com/@bill_oxford?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+    company-name: Unsplash
+    company-link: https://unsplash.com/s/photos/cogs?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+    license: unsplash
+  binoculars:
+    image: binoculars
+    author-name: tito pixel
+    author-link: https://unsplash.com/@titopixel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+    company-name: Unsplash
+    company-link: https://unsplash.com/s/photos/binoculars?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
+    license: unsplash
