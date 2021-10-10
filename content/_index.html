@@ -2,9 +2,19 @@
 title: "Homepage - The Systemic Programmer"
 date: 2021-09-17T22:51:53+02:00
 draft: false
+heroimage: communication
 ---
 
-<section class="section" style="background-color: turquoise;">
+{{< hero-image >}}
+
+<section class="section">
+    <div class="container">
+        <h1 class="has-text-centered is-size-2 mb-5">Most Recent Blog Posts</h1>
+    {{< recent-blog-posts >}}
+    <p class="is-size-4 has-text-centered">For a complete list of blog posts please visit the <a href="/blog">blog overview page</a>.</p>
+</section>
+
+<section class="section" style="background-color: khaki;">
     <div class="container has-text-centered">
         <p style="font-family:sans-serif; font-size: 6vw;">
             [s&#618;&#712;stem&#618;c]
@@ -20,7 +30,7 @@ draft: false
 
 {{< features >}}
 
-<section class="section" style="background-color: khaki;">
+<section class="section" style="background-color: lightblue;">
     <div class="container has-text-centered">
         <h1 class="is-size-2">Thank you for visiting</h1>
         <div style="margin: 0 7vw 0">

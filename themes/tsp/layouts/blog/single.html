@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $topic := index (.Params.topics) 0 }}
-{{ if  .Site.Params.showHeroForSinglePost }}
-    {{ partial "hero.html" (dict "context" $.Page "defaultimage" (index site.Data.categoryimage $topic))}}
+{{ if .Site.Params.showHeroForSinglePost }}
+{{ partial "hero.html" (dict "context" $.Page "defaultimage" (index site.Data.categoryimage $topic))}}
 {{ end }}
 <div class="container">
     <section class="section {{ if (not .Site.Params.showHeroForSinglePost) }}mt-5{{ end }}">
@@ -9,50 +9,56 @@
             <h1 class="title is-2">{{ .Title }}</h1>
             {{ with .Params.subtitle }}
             <h2 class="subtitle is-3">{{ . }}</h1>
-            {{ end }}
+                {{ end }}
 
-            <div class="title subtitle heading is-6 mt-3">
-                <div class="columns is-vcentered is-mobile">
-                    {{ with .Site.Params.AuthorImage }}
-                    <div class="column is-narrow">
-                        <img src="{{ . }}" class="author-image mt-2">
-                    </div>
-                    {{ end }}
-                    <div class="column is-vcentered">
-                        <p class="mb-2">{{ .Site.Params.Author }}</p>
-                        <p>
-                            <time><i class="far fa-calendar"></i>{{ .PublishDate.Format "January 2, 2006" }}</time>
-                            <i class="far fa-clock ml-2"></i> {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes {{ end }}
-                            <i class="far fa-eye ml-2"></i> 
-                            {{ $views := index .Site.Data.pageviews .RelPermalink }}
-                            {{ if lt $views 20 }}
-                            less than 20
-                            {{ else }}
-                            {{ $views }}
-                            {{ end }}
-                        </p>
+                <div class="title subtitle heading is-6 mt-3">
+                    <div class="columns is-vcentered is-mobile">
+                        {{ with .Site.Params.AuthorImage }}
+                        <div class="column is-narrow">
+                            <img src="{{ . }}" class="author-image mt-2">
+                        </div>
+                        {{ end }}
+                        <div class="column is-vcentered">
+                            <p class="mb-2">{{ .Site.Params.Author }}</p>
+                            <p>
+                                <time><i class="far fa-calendar"></i>{{ .PublishDate.Format "January 2, 2006" }}</time>
+                                <i class="far fa-clock ml-2"></i> {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute
+                                {{ else }} minutes {{ end }}
+                                <i class="far fa-eye ml-2"></i>
+                                {{ $views := index .Site.Data.pageviews .RelPermalink }}
+                                {{ if lt $views 20 }}
+                                less than 20
+                                {{ else }}
+                                {{ $views }}
+                                {{ end }}
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div>
-                <a class="mr-4" href="{{ "topics/" | relURL }}{{ $topic | urlize }}"><span class="tag is-success">{{ $topic }}</span></a>
-                {{ range .Params.tags }}
-                <a href="{{ "categories/" | relURL }}{{ . | urlize }}"><span class="tag is-link">{{ . }}</span></a>
-                {{ end }}
-              </div>
-        
-            <div class="content mt-6">
-                {{ .Content }}
-            </div>
+                <div>
+                    <a class="mr-4" href="{{ " topics/" | relURL }}{{ $topic | urlize }}"><span
+                            class="tag is-success">{{ $topic }}</span></a>
+                    {{ range .Params.tags }}
+                    <a href="{{ " categories/" | relURL }}{{ . | urlize }}"><span class="tag is-link">{{ . }}</span></a>
+                    {{ end }}
+                </div>
+
+                <div class="content mt-6">
+                    {{ .Content }}
+                </div>
         </article>
-    </section>
-    <section class="section">
-        <hr>
+        <hr class="mt-6">
+        <div class="content">
+            <h2>Share this article:</h2>
+        </div>
+        {{ partial "share.html" . }}
+
+        <hr class="mt-6">
         <div class="columns is-centered">
             <div class="column">
                 <div class="content">
-                    <h3>Related content:</h3>
+                    <h2>Related content:</h2>
                 </div>
                 <div class="columns">
                     {{ $related := (where (.Site.RegularPages.Related .) "Type" "blog") | first 3 }}
@@ -64,13 +70,12 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="section mb-5">
-        <hr>
+
+        <hr class="mt-6">
         <div class="content">
-            <h3>Leave a comment:</h3>
+            <h2>Leave a comment:</h2>
         </div>
-</script>
+        </script>
     </section>
 </div>
 

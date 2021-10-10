@@ -1,0 +1,50 @@
+[
+	{
+		"id": "Wenger 1998",
+		"type": "book",
+		"publisher": "Cambridge university press",
+		"source": "Google Scholar",
+		"title": "Communities of practice: Learning, meaning, and identity",
+		"title-short": "Communities of practice",
+		"author": [
+			{
+				"family": "Wenger",
+				"given": "Etienne"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1998"
+				]
+			]
+		}
+	},
+	{
+		"id": "Kruchten 2008",
+		"type": "article-journal",
+		"abstract": "The first installment of this new column on professional development discusses how some software engineering ideas have a half-life. The author conjectures that this half-life is roughly five years, and outlines the need for software engineers to thus stay abreast of new technologies.",
+		"container-title": "IEEE Software",
+		"DOI": "10.1109/MS.2008.127",
+		"ISSN": "0740-7459",
+		"issue": "5",
+		"page": "10-11",
+		"source": "IEEE Xplore",
+		"title": "The Biological Half-Life of Software Engineering Ideas",
+		"volume": "25",
+		"author": [
+			{
+				"family": "Kruchten",
+				"given": "P."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2008",
+					9
+				]
+			]
+		}
+	}
+]

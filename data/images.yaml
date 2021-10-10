@@ -70,3 +70,9 @@
     companyname: Unsplash
     companylink: https://unsplash.com/s/photos/binoculars?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText
     license: unsplash
+  communication:
+    authorname: Pete Linforth
+    authorlink: https://pixabay.com/de/users/thedigitalartist-202249/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4871245
+    companyname: Pixabay
+    companylink: https://pixabay.com/de/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4871245
+    license: pixabay

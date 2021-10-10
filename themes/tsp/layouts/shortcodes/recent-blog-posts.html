@@ -1,0 +1,26 @@
+{{ $count := .Get "count" | default 6 }}
+{{ $pages := first $count (where .Site.RegularPages "Type" "in" "blog") }}
+
+<div class="columns is-hidden-mobile">
+    <div class="column is-6 mr-4">
+    {{ range $elem_index, $elem_val := $pages }}
+        {{ if (modBool $elem_index 2) }}
+            {{ partial "post-summary-card.html" $elem_val }}
+        {{ end }}
+    {{ end }}
+    </div>
+    <div class="column is-6 ml-4">
+    {{ range $elem_index, $elem_val := $pages }}
+        {{ if not (modBool $elem_index 2) }}
+            {{ partial "post-summary-card.html" $elem_val }}
+        {{ end }}
+    {{ end }}
+    </div>
+</div>
+<div class="columns is-hidden-tablet">
+    <div class="column mr-4">
+    {{ range $elem_index, $elem_val := $pages }}
+        {{ partial "post-summary-card.html" $elem_val }}
+    {{ end }}
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="buttons">
+
+    <button class="button is-small has-text-white" style="background-color: #00aced;" data-sharer="twitter"
+        data-title="The Systemic Programmer - {{ .Title }}" data-via="thesystemicprog" data-url="{{ .Permalink }}">
+        <span class="icon mr-3">
+            <i class="fa fa-twitter is-size-5"></i>
+        </span>
+        <span>
+            Twitter
+        </span>
+    </button>
+
+    <button class="button is-small has-text-white" style="background-color: #FF6700;" data-sharer="hackernews"
+        data-title="The Systemic Programmer - {{ .Title }}" data-url="{{ .Permalink }}">
+        <span class="icon mr-3">
+            <i class="fa fa-hacker-news is-size-5"></i>
+        </span>
+        <span>
+            Hacker News
+        </span>
+    </button>
+
+    <button class="button is-small has-text-white" style="background-color: #3b5998;" data-sharer="facebook"
+        data-url="{{ .Permalink }}">
+        <span class="icon mr-3">
+            <i class="fa fa-facebook is-size-5"></i>
+        </span>
+        <span>
+            Facebook
+        </span>
+    </button>
+
+    <button class="button is-small has-text-white" style="background-color: #e61313;" data-sharer="reddit"
+        data-url="{{ .Permalink }}">
+        <span class="icon mr-3">
+            <i class="fa fa-reddit is-size-5"></i>
+        </span>
+        <span>
+            Reddit
+        </span>
+    </button>
+
+    <button class="button is-small has-text-white" style="background-color: #4DC247;" data-sharer="whatsapp"
+        data-title="The Systemic Programmer - {{ .Title }}" data-url="{{ .Permalink }}">
+        <span class="icon mr-3">
+            <i class="fa fa-whatsapp is-size-5"></i>
+        </span>
+        <span>
+            Whatsapp
+        </span>
+    </button>
+
+    <button class="button is-small has-text-white" style="background-color: #0c54b3;" data-sharer="linkedin"
+        data-url="{{ .Permalink }}">
+        <span class="icon mr-3">
+            <i class="fa fa-linkedin-squared is-size-5"></i>
+        </span>
+        <span>
+            Linkedin
+        </span>
+    </button>
+
+    <button class="button is-small" data-sharer="email"
+        data-title="<h2>The Systemic Programmer</h2><h3>{{ .Title }}</h3><p>{{ .Summary }}</p>"
+        data-url="Read the full article: {{ .Permalink }}" data-subject="The Systemic Programmer - {{ .Title }}"
+        data-to="">
+        <span class="icon mr-3">
+            <i class="fa fa-mail is-size-5"></i>
+        </span>
+        <span>
+            E-Mail
+        </span>
+    </button>
+</div>
+
+<script defer src="/js/sharer.min.js"></script>

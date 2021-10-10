@@ -5,23 +5,33 @@
         <h1 class="title is-2">{{ .Title }}</h1>
         {{ .Content }}
         <div class="content">
-            <div class="columns">
+
+            <div class="columns is-hidden-mobile">
                 <div class="column is-6 mr-4">
-                {{ range $elem_index, $elem_val := .Paginator.Pages }}
+                    {{ range $elem_index, $elem_val := .Paginator.Pages }}
                     {{ if (modBool $elem_index 2) }}
-                        {{ partial "post-summary-card.html" $elem_val }}
+                    {{ partial "post-summary-card.html" $elem_val }}
                     {{ end }}
-                {{ end }}
+                    {{ end }}
                 </div>
                 <div class="column is-6 ml-4">
-                {{ range $elem_index, $elem_val := .Paginator.Pages }}
+                    {{ range $elem_index, $elem_val := .Paginator.Pages }}
                     {{ if not (modBool $elem_index 2) }}
-                        {{ partial "post-summary-card.html" $elem_val }}
+                    {{ partial "post-summary-card.html" $elem_val }}
                     {{ end }}
-                {{ end }}
+                    {{ end }}
                 </div>
             </div>
-            {{ partial "pagination.html" . }}    
+
+            <div class="columns is-hidden-tablet">
+                <div class="column mr-4">
+                    {{ range $elem_index, $elem_val := .Paginator.Pages }}
+                    {{ partial "post-summary-card.html" $elem_val }}
+                    {{ end }}
+                </div>
+            </div>
+
+            {{ partial "pagination.html" . }}
         </div>
     </div>
 </div>

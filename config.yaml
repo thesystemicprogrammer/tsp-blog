@@ -1,7 +1,9 @@
 baseURL: https://thesystemicprogrammer.org
 languageCode: en-us
 title: The Systemic Programmer
-theme: tsp
+theme: 
+  - tsp
+  - hugo-cite
 
 menu:
   main:
@@ -50,6 +52,8 @@ params:
   showHero: true
   showHeroForSinglePost: false
   searchSections: ["blog", "software"]
+  citations: false
+
 
 outputFormats:
   Lunr:
