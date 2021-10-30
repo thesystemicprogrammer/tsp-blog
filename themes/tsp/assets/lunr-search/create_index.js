@@ -28,4 +28,4 @@ var idx = lunr(function () {
 fs.writeFileSync(OUTPUT_FILE_PUBLIC, JSON.stringify(idx));
 fs.writeFileSync(OUTPUT_FILE_STATIC, JSON.stringify(idx));
 
-console.log("\nLunr index created\n");
+console.log("Lunr index created\n");

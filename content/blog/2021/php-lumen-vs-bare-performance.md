@@ -17,3 +17,13 @@ I needed a simple API to track unique blog page views. I decided to use PHP sinc
 ## Requirements
 
 The script should be able to do the following ...
+
+```bash
+httpstat -X POST \
+    -H 'Authorization: post' \
+    -H 'User-Agent: curl' \
+    -H 'Content-Type: application/json' \
+    -d '{"uri": "test"}'  \
+    -o response.txt \
+    'https://www.tombersoft.com/pageview/pageview'
+```

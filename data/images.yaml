@@ -76,3 +76,9 @@
     companyname: Pixabay
     companylink: https://pixabay.com/de/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4871245
     license: pixabay
+  thankyou:
+    authorname: Alexas_Fotos
+    authorlink: https://unsplash.com/@alexas_fotos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+    companyname: Unsplash
+    companylink: https://unsplash.com/s/photos/thank-you?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+    license: unsplash

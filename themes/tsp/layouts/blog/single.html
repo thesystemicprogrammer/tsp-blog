@@ -26,10 +26,10 @@
                                 {{ else }} minutes {{ end }}
                                 <i class="far fa-eye ml-2"></i>
                                 {{ $views := index .Site.Data.pageviews .RelPermalink }}
-                                {{ if lt $views 20 }}
+                                {{ if lt $views.pageviews 0 }}
                                 less than 20
                                 {{ else }}
-                                {{ $views }}
+                                {{ $views.pageviews }}
                                 {{ end }}
                             </p>
                         </div>
@@ -50,7 +50,7 @@
         </article>
         <hr class="mt-6">
         <div class="content">
-            <h2>Share this article:</h2>
+            <h2>Share this article</h2>
         </div>
         {{ partial "share.html" . }}
 
@@ -58,7 +58,7 @@
         <div class="columns is-centered">
             <div class="column">
                 <div class="content">
-                    <h2>Related content:</h2>
+                    <h2>Related content</h2>
                 </div>
                 <div class="columns">
                     {{ $related := (where (.Site.RegularPages.Related .) "Type" "blog") | first 3 }}
@@ -73,7 +73,8 @@
 
         <hr class="mt-6">
         <div class="content">
-            <h2>Leave a comment:</h2>
+            <h2>Leave a comment</h2>
+            <p>Commenting functionality will be added soon!</p>
         </div>
         </script>
     </section>

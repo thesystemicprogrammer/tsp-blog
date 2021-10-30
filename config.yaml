@@ -8,23 +8,23 @@ theme:
 menu:
   main:
     - name: Blog
-      url: /blog
+      url: /blog/
       weight: 200
 
     - name: Topics
-      url: /topics
+      url: /topics/
       weight: 300
 
     - name: Pathways
-      url: /pathways
+      url: /pathways/
       weight: 400
 
     - name: Tags
-      url: /tags
+      url: /tags/
       weight: 500
 
     - name: Software
-      url: /software
+      url: /software/
       weight: 600
 
 taxonomies:

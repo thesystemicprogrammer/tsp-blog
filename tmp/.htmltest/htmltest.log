@@ -1,0 +1,296 @@
+target does not exist --- search/index.html --> /software/
+Non-OK status: 999 --- search/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- search/index.html --> legal/mit-license.htmls
+target does not exist --- 404.html --> /software/
+Non-OK status: 999 --- 404.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- 404.html --> legal/mit-license.htmls
+Not Found [rel="canonical"] --- topics/software-engineering/page/1/index.html --> https://thesystemicprogrammer.org/topics/software-engineering/
+Non-OK status: 404 --- topics/software-engineering/page/1/index.html --> https://thesystemicprogrammer.org/topics/software-engineering/
+Not Found [rel="canonical"] --- topics/software-engineering/index.html --> https://thesystemicprogrammer.org/topics/software-engineering/
+target does not exist --- topics/software-engineering/index.html --> /software/
+Non-OK status: 404 --- topics/software-engineering/index.html --> https://thesystemicprogrammer.org/blog/2021/se-learning-strategies/
+target is a directory, href lacks trailing slash --- topics/software-engineering/index.html --> /topics/software-engineering
+Non-OK status: 999 --- topics/software-engineering/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- topics/software-engineering/index.html --> legal/mit-license.htmls
+target does not exist --- topics/practice/index.html --> /software/
+Non-OK status: 403 --- topics/practice/index.html --> https://pixabay.com/de/users/jamesmarkosborne-1640589/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1076536
+Non-OK status: 403 --- topics/practice/index.html --> https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1076536
+Non-OK status: 403 --- topics/practice/index.html --> https://pixabay.com/service/terms/#license
+Non-OK status: 404 --- topics/practice/index.html --> https://thesystemicprogrammer.org/blog/2021/php-lumen-vs-bare-performance/
+target is a directory, href lacks trailing slash --- topics/practice/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- topics/practice/index.html --> /tags/php
+target is a directory, href lacks trailing slash --- topics/practice/index.html --> /tags/web-development
+target is a directory, href lacks trailing slash --- topics/practice/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- topics/practice/index.html --> /tags/reactive
+target is a directory, href lacks trailing slash --- topics/practice/index.html --> /tags/spring-boot
+Non-OK status: 404 --- topics/practice/index.html --> https://thesystemicprogrammer.org/blog/2021/aws-cloud-practitioner/
+target is a directory, href lacks trailing slash --- topics/practice/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- topics/practice/index.html --> /tags/aws
+target is a directory, href lacks trailing slash --- topics/practice/index.html --> /tags/certifications
+Non-OK status: 999 --- topics/practice/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- topics/practice/index.html --> legal/mit-license.htmls
+target does not exist --- topics/index.html --> /software/
+Non-OK status: 404 --- topics/index.html --> https://thesystemicprogrammer.org/topics/systems-thinking/
+Non-OK status: 404 --- topics/index.html --> https://thesystemicprogrammer.org/topics/software-engineering/
+Non-OK status: 999 --- topics/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- topics/index.html --> legal/mit-license.htmls
+Not Found [rel="canonical"] --- topics/systems-thinking/page/1/index.html --> https://thesystemicprogrammer.org/topics/systems-thinking/
+Non-OK status: 404 --- topics/systems-thinking/page/1/index.html --> https://thesystemicprogrammer.org/topics/systems-thinking/
+Not Found [rel="canonical"] --- topics/systems-thinking/index.html --> https://thesystemicprogrammer.org/topics/systems-thinking/
+target does not exist --- topics/systems-thinking/index.html --> /software/
+Non-OK status: 404 --- topics/systems-thinking/index.html --> https://thesystemicprogrammer.org/blog/2021/systems-thinking/
+target is a directory, href lacks trailing slash --- topics/systems-thinking/index.html --> /topics/systems-thinking
+Non-OK status: 404 --- topics/systems-thinking/index.html --> https://thesystemicprogrammer.org/blog/2021/why-systemic-programmer/
+target is a directory, href lacks trailing slash --- topics/systems-thinking/index.html --> /topics/systems-thinking
+Non-OK status: 999 --- topics/systems-thinking/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- topics/systems-thinking/index.html --> legal/mit-license.htmls
+target does not exist --- about/index.html --> /software/
+Non-OK status: 999 --- about/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- about/index.html --> legal/mit-license.htmls
+target does not exist --- index.html --> /software/
+Non-OK status: 403 --- index.html --> https://pixabay.com/de/users/thedigitalartist-202249/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4871245
+Non-OK status: 403 --- index.html --> https://pixabay.com/de/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4871245
+Non-OK status: 403 --- index.html --> https://pixabay.com/service/terms/#license
+Non-OK status: 404 --- index.html --> https://thesystemicprogrammer.org/blog/2021/se-learning-strategies/
+target is a directory, href lacks trailing slash --- index.html --> /topics/software-engineering
+Non-OK status: 404 --- index.html --> https://thesystemicprogrammer.org/blog/2021/aws-cloud-practitioner/
+target is a directory, href lacks trailing slash --- index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- index.html --> /tags/aws
+target is a directory, href lacks trailing slash --- index.html --> /tags/certifications
+Non-OK status: 404 --- index.html --> https://thesystemicprogrammer.org/blog/2021/why-systemic-programmer/
+target is a directory, href lacks trailing slash --- index.html --> /topics/systems-thinking
+Non-OK status: 404 --- index.html --> https://thesystemicprogrammer.org/blog/2021/php-lumen-vs-bare-performance/
+target is a directory, href lacks trailing slash --- index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- index.html --> /tags/php
+target is a directory, href lacks trailing slash --- index.html --> /tags/web-development
+Non-OK status: 404 --- index.html --> https://thesystemicprogrammer.org/blog/2021/systems-thinking/
+target is a directory, href lacks trailing slash --- index.html --> /topics/systems-thinking
+target is a directory, href lacks trailing slash --- index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- index.html --> /tags/reactive
+target is a directory, href lacks trailing slash --- index.html --> /tags/spring-boot
+Non-OK status: 404 --- index.html --> https://thesystemicprogrammer.org/blog/2021/se-learning-strategies/
+target is a directory, href lacks trailing slash --- index.html --> /topics/software-engineering
+Non-OK status: 404 --- index.html --> https://thesystemicprogrammer.org/blog/2021/php-lumen-vs-bare-performance/
+target is a directory, href lacks trailing slash --- index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- index.html --> /tags/php
+target is a directory, href lacks trailing slash --- index.html --> /tags/web-development
+Non-OK status: 404 --- index.html --> https://thesystemicprogrammer.org/blog/2021/aws-cloud-practitioner/
+target is a directory, href lacks trailing slash --- index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- index.html --> /tags/aws
+target is a directory, href lacks trailing slash --- index.html --> /tags/certifications
+Non-OK status: 404 --- index.html --> https://thesystemicprogrammer.org/blog/2021/systems-thinking/
+target is a directory, href lacks trailing slash --- index.html --> /topics/systems-thinking
+Non-OK status: 404 --- index.html --> https://thesystemicprogrammer.org/blog/2021/why-systemic-programmer/
+target is a directory, href lacks trailing slash --- index.html --> /topics/systems-thinking
+target is a directory, href lacks trailing slash --- index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- index.html --> /tags/reactive
+target is a directory, href lacks trailing slash --- index.html --> /tags/spring-boot
+Get "https://topics/software-engineering": dial tcp: lookup topics: No address associated with hostname --- index.html --> //topics/software-engineering
+Get "https://topics/software-engineering": dial tcp: lookup topics: No address associated with hostname --- index.html --> //topics/software-engineering
+target is a directory, href lacks trailing slash --- index.html --> /topics/systems-thinking
+target is a directory, href lacks trailing slash --- index.html --> /topics/systems-thinking
+target is a directory, href lacks trailing slash --- index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- index.html --> /topics/practice
+target does not exist --- index.html --> /topics/pathways
+target does not exist --- index.html --> /topics/pathways
+target does not exist --- index.html --> /motivation
+target does not exist --- index.html --> /motivation
+Non-OK status: 999 --- index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- index.html --> legal/mit-license.htmls
+Not Found [rel="canonical"] --- blog/2021/php-lumen-vs-bare-performance/index.html --> https://thesystemicprogrammer.org/blog/2021/php-lumen-vs-bare-performance/
+target does not exist --- blog/2021/php-lumen-vs-bare-performance/index.html --> /software/
+alt attribute missing --- blog/2021/php-lumen-vs-bare-performance/index.html --> /images/thomas.webp
+target does not exist --- blog/2021/php-lumen-vs-bare-performance/index.html --> /%20topics/practice
+target does not exist --- blog/2021/php-lumen-vs-bare-performance/index.html --> /%20categories/php
+target does not exist --- blog/2021/php-lumen-vs-bare-performance/index.html --> /%20categories/web-development
+Non-OK status: 404 --- blog/2021/php-lumen-vs-bare-performance/index.html --> https://thesystemicprogrammer.org/blog/2021/aws-cloud-practitioner/
+Non-OK status: 404 --- blog/2021/php-lumen-vs-bare-performance/index.html --> https://thesystemicprogrammer.org/blog/2021/se-learning-strategies/
+Non-OK status: 999 --- blog/2021/php-lumen-vs-bare-performance/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- blog/2021/php-lumen-vs-bare-performance/index.html --> legal/mit-license.htmls
+Not Found [rel="canonical"] --- blog/2021/why-systemic-programmer/index.html --> https://thesystemicprogrammer.org/blog/2021/why-systemic-programmer/
+target does not exist --- blog/2021/why-systemic-programmer/index.html --> /software/
+alt attribute missing --- blog/2021/why-systemic-programmer/index.html --> /images/thomas.webp
+target does not exist --- blog/2021/why-systemic-programmer/index.html --> /%20topics/systems-thinking
+Non-OK status: 404 --- blog/2021/why-systemic-programmer/index.html --> https://thesystemicprogrammer.org/blog/2021/systems-thinking/
+Non-OK status: 404 --- blog/2021/why-systemic-programmer/index.html --> https://thesystemicprogrammer.org/blog/2021/se-learning-strategies/
+Non-OK status: 404 --- blog/2021/why-systemic-programmer/index.html --> https://thesystemicprogrammer.org/blog/2021/php-lumen-vs-bare-performance/
+Non-OK status: 999 --- blog/2021/why-systemic-programmer/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- blog/2021/why-systemic-programmer/index.html --> legal/mit-license.htmls
+Not Found [rel="canonical"] --- blog/2021/se-learning-strategies/index.html --> https://thesystemicprogrammer.org/blog/2021/se-learning-strategies/
+target does not exist --- blog/2021/se-learning-strategies/index.html --> /software/
+alt attribute missing --- blog/2021/se-learning-strategies/index.html --> /images/thomas.webp
+target does not exist --- blog/2021/se-learning-strategies/index.html --> /%20topics/software-engineering
+Non-OK status: 404 --- blog/2021/se-learning-strategies/index.html --> https://thesystemicprogrammer.org/blog/2021/php-lumen-vs-bare-performance/
+Non-OK status: 404 --- blog/2021/se-learning-strategies/index.html --> https://thesystemicprogrammer.org/blog/2021/aws-cloud-practitioner/
+Non-OK status: 404 --- blog/2021/se-learning-strategies/index.html --> https://thesystemicprogrammer.org/blog/2021/systems-thinking/
+Non-OK status: 999 --- blog/2021/se-learning-strategies/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- blog/2021/se-learning-strategies/index.html --> legal/mit-license.htmls
+Not Found [rel="canonical"] --- blog/2021/systems-thinking/index.html --> https://thesystemicprogrammer.org/blog/2021/systems-thinking/
+target does not exist --- blog/2021/systems-thinking/index.html --> /software/
+alt attribute missing --- blog/2021/systems-thinking/index.html --> /images/thomas.webp
+target does not exist --- blog/2021/systems-thinking/index.html --> /%20topics/systems-thinking
+Non-OK status: 404 --- blog/2021/systems-thinking/index.html --> https://thesystemicprogrammer.org/blog/2021/why-systemic-programmer/
+Non-OK status: 404 --- blog/2021/systems-thinking/index.html --> https://thesystemicprogrammer.org/blog/2021/se-learning-strategies/
+Non-OK status: 404 --- blog/2021/systems-thinking/index.html --> https://thesystemicprogrammer.org/blog/2021/php-lumen-vs-bare-performance/
+Non-OK status: 999 --- blog/2021/systems-thinking/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- blog/2021/systems-thinking/index.html --> legal/mit-license.htmls
+Not Found [rel="canonical"] --- blog/2021/aws-cloud-practitioner/index.html --> https://thesystemicprogrammer.org/blog/2021/aws-cloud-practitioner/
+target does not exist --- blog/2021/aws-cloud-practitioner/index.html --> /software/
+alt attribute missing --- blog/2021/aws-cloud-practitioner/index.html --> /images/thomas.webp
+target does not exist --- blog/2021/aws-cloud-practitioner/index.html --> /%20topics/practice
+target does not exist --- blog/2021/aws-cloud-practitioner/index.html --> /%20categories/aws
+target does not exist --- blog/2021/aws-cloud-practitioner/index.html --> /%20categories/certifications
+Non-OK status: 404 --- blog/2021/aws-cloud-practitioner/index.html --> https://thesystemicprogrammer.org/blog/2021/php-lumen-vs-bare-performance/
+Non-OK status: 404 --- blog/2021/aws-cloud-practitioner/index.html --> https://thesystemicprogrammer.org/blog/2021/se-learning-strategies/
+Non-OK status: 999 --- blog/2021/aws-cloud-practitioner/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- blog/2021/aws-cloud-practitioner/index.html --> legal/mit-license.htmls
+target does not exist --- blog/2021/reactive/index.html --> /software/
+alt attribute missing --- blog/2021/reactive/index.html --> /images/thomas.webp
+target does not exist --- blog/2021/reactive/index.html --> /%20topics/practice
+target does not exist --- blog/2021/reactive/index.html --> /%20categories/reactive
+target does not exist --- blog/2021/reactive/index.html --> /%20categories/spring-boot
+Non-OK status: 404 --- blog/2021/reactive/index.html --> https://thesystemicprogrammer.org/blog/2021/php-lumen-vs-bare-performance/
+Non-OK status: 404 --- blog/2021/reactive/index.html --> https://thesystemicprogrammer.org/blog/2021/aws-cloud-practitioner/
+Non-OK status: 404 --- blog/2021/reactive/index.html --> https://thesystemicprogrammer.org/blog/2021/se-learning-strategies/
+Non-OK status: 999 --- blog/2021/reactive/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- blog/2021/reactive/index.html --> legal/mit-license.htmls
+target does not exist --- blog/index.html --> /software/
+Non-OK status: 403 --- blog/index.html --> https://pixabay.com/de/users/Hannibal8height-2964991/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1700787
+Non-OK status: 403 --- blog/index.html --> https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1700787
+Non-OK status: 403 --- blog/index.html --> https://pixabay.com/service/terms/#license
+Non-OK status: 404 --- blog/index.html --> https://thesystemicprogrammer.org/blog/2021/se-learning-strategies/
+target is a directory, href lacks trailing slash --- blog/index.html --> /topics/software-engineering
+Non-OK status: 404 --- blog/index.html --> https://thesystemicprogrammer.org/blog/2021/aws-cloud-practitioner/
+target is a directory, href lacks trailing slash --- blog/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- blog/index.html --> /tags/aws
+target is a directory, href lacks trailing slash --- blog/index.html --> /tags/certifications
+Non-OK status: 404 --- blog/index.html --> https://thesystemicprogrammer.org/blog/2021/why-systemic-programmer/
+target is a directory, href lacks trailing slash --- blog/index.html --> /topics/systems-thinking
+Non-OK status: 404 --- blog/index.html --> https://thesystemicprogrammer.org/blog/2021/php-lumen-vs-bare-performance/
+target is a directory, href lacks trailing slash --- blog/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- blog/index.html --> /tags/php
+target is a directory, href lacks trailing slash --- blog/index.html --> /tags/web-development
+Non-OK status: 404 --- blog/index.html --> https://thesystemicprogrammer.org/blog/2021/systems-thinking/
+target is a directory, href lacks trailing slash --- blog/index.html --> /topics/systems-thinking
+target is a directory, href lacks trailing slash --- blog/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- blog/index.html --> /tags/reactive
+target is a directory, href lacks trailing slash --- blog/index.html --> /tags/spring-boot
+Non-OK status: 404 --- blog/index.html --> https://thesystemicprogrammer.org/blog/2021/se-learning-strategies/
+target is a directory, href lacks trailing slash --- blog/index.html --> /topics/software-engineering
+Non-OK status: 404 --- blog/index.html --> https://thesystemicprogrammer.org/blog/2021/php-lumen-vs-bare-performance/
+target is a directory, href lacks trailing slash --- blog/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- blog/index.html --> /tags/php
+target is a directory, href lacks trailing slash --- blog/index.html --> /tags/web-development
+Non-OK status: 404 --- blog/index.html --> https://thesystemicprogrammer.org/blog/2021/aws-cloud-practitioner/
+target is a directory, href lacks trailing slash --- blog/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- blog/index.html --> /tags/aws
+target is a directory, href lacks trailing slash --- blog/index.html --> /tags/certifications
+Non-OK status: 404 --- blog/index.html --> https://thesystemicprogrammer.org/blog/2021/systems-thinking/
+target is a directory, href lacks trailing slash --- blog/index.html --> /topics/systems-thinking
+Non-OK status: 404 --- blog/index.html --> https://thesystemicprogrammer.org/blog/2021/why-systemic-programmer/
+target is a directory, href lacks trailing slash --- blog/index.html --> /topics/systems-thinking
+target is a directory, href lacks trailing slash --- blog/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- blog/index.html --> /tags/reactive
+target is a directory, href lacks trailing slash --- blog/index.html --> /tags/spring-boot
+Non-OK status: 999 --- blog/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- blog/index.html --> legal/mit-license.htmls
+Not Found [rel="canonical"] --- tags/aws/page/1/index.html --> https://thesystemicprogrammer.org/tags/aws/
+Non-OK status: 404 --- tags/aws/page/1/index.html --> https://thesystemicprogrammer.org/tags/aws/
+Not Found [rel="canonical"] --- tags/aws/index.html --> https://thesystemicprogrammer.org/tags/aws/
+target does not exist --- tags/aws/index.html --> /software/
+Non-OK status: 404 --- tags/aws/index.html --> https://thesystemicprogrammer.org/blog/2021/aws-cloud-practitioner/
+target is a directory, href lacks trailing slash --- tags/aws/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- tags/aws/index.html --> /tags/aws
+target is a directory, href lacks trailing slash --- tags/aws/index.html --> /tags/certifications
+Non-OK status: 999 --- tags/aws/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- tags/aws/index.html --> legal/mit-license.htmls
+Not Found [rel="canonical"] --- tags/web-development/page/1/index.html --> https://thesystemicprogrammer.org/tags/web-development/
+Non-OK status: 404 --- tags/web-development/page/1/index.html --> https://thesystemicprogrammer.org/tags/web-development/
+Not Found [rel="canonical"] --- tags/web-development/index.html --> https://thesystemicprogrammer.org/tags/web-development/
+target does not exist --- tags/web-development/index.html --> /software/
+Non-OK status: 404 --- tags/web-development/index.html --> https://thesystemicprogrammer.org/blog/2021/php-lumen-vs-bare-performance/
+target is a directory, href lacks trailing slash --- tags/web-development/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- tags/web-development/index.html --> /tags/php
+target is a directory, href lacks trailing slash --- tags/web-development/index.html --> /tags/web-development
+Non-OK status: 999 --- tags/web-development/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- tags/web-development/index.html --> legal/mit-license.htmls
+Not Found [rel="canonical"] --- tags/php/page/1/index.html --> https://thesystemicprogrammer.org/tags/php/
+Non-OK status: 404 --- tags/php/page/1/index.html --> https://thesystemicprogrammer.org/tags/php/
+Not Found [rel="canonical"] --- tags/php/index.html --> https://thesystemicprogrammer.org/tags/php/
+target does not exist --- tags/php/index.html --> /software/
+Non-OK status: 404 --- tags/php/index.html --> https://thesystemicprogrammer.org/blog/2021/php-lumen-vs-bare-performance/
+target is a directory, href lacks trailing slash --- tags/php/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- tags/php/index.html --> /tags/php
+target is a directory, href lacks trailing slash --- tags/php/index.html --> /tags/web-development
+Non-OK status: 999 --- tags/php/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- tags/php/index.html --> legal/mit-license.htmls
+Not Found [rel="canonical"] --- tags/certifications/page/1/index.html --> https://thesystemicprogrammer.org/tags/certifications/
+Non-OK status: 404 --- tags/certifications/page/1/index.html --> https://thesystemicprogrammer.org/tags/certifications/
+Not Found [rel="canonical"] --- tags/certifications/index.html --> https://thesystemicprogrammer.org/tags/certifications/
+target does not exist --- tags/certifications/index.html --> /software/
+Non-OK status: 404 --- tags/certifications/index.html --> https://thesystemicprogrammer.org/blog/2021/aws-cloud-practitioner/
+target is a directory, href lacks trailing slash --- tags/certifications/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- tags/certifications/index.html --> /tags/aws
+target is a directory, href lacks trailing slash --- tags/certifications/index.html --> /tags/certifications
+Non-OK status: 999 --- tags/certifications/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- tags/certifications/index.html --> legal/mit-license.htmls
+target does not exist --- tags/index.html --> /software/
+Non-OK status: 404 --- tags/index.html --> https://thesystemicprogrammer.org/tags/aws/
+Non-OK status: 404 --- tags/index.html --> https://thesystemicprogrammer.org/tags/certifications/
+Non-OK status: 404 --- tags/index.html --> https://thesystemicprogrammer.org/tags/php/
+Non-OK status: 404 --- tags/index.html --> https://thesystemicprogrammer.org/tags/web-development/
+Non-OK status: 999 --- tags/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- tags/index.html --> legal/mit-license.htmls
+target does not exist --- tags/spring-boot/index.html --> /software/
+target is a directory, href lacks trailing slash --- tags/spring-boot/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- tags/spring-boot/index.html --> /tags/reactive
+target is a directory, href lacks trailing slash --- tags/spring-boot/index.html --> /tags/spring-boot
+Non-OK status: 999 --- tags/spring-boot/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- tags/spring-boot/index.html --> legal/mit-license.htmls
+target does not exist --- tags/reactive/index.html --> /software/
+target is a directory, href lacks trailing slash --- tags/reactive/index.html --> /topics/practice
+target is a directory, href lacks trailing slash --- tags/reactive/index.html --> /tags/reactive
+target is a directory, href lacks trailing slash --- tags/reactive/index.html --> /tags/spring-boot
+Non-OK status: 999 --- tags/reactive/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- tags/reactive/index.html --> legal/mit-license.htmls
+target does not exist --- legal/disclaimer/index.html --> /software/
+Non-OK status: 403 --- legal/disclaimer/index.html --> https://pixabay.com/de/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67400
+Non-OK status: 403 --- legal/disclaimer/index.html --> https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67400
+Non-OK status: 403 --- legal/disclaimer/index.html --> https://pixabay.com/service/terms/#license
+Non-OK status: 404 --- legal/disclaimer/index.html --> https://thesystemicprogrammer.org/contact
+Non-OK status: 999 --- legal/disclaimer/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- legal/disclaimer/index.html --> legal/mit-license.htmls
+target does not exist --- legal/contact/index.html --> /software/
+Non-OK status: 403 --- legal/contact/index.html --> https://pixabay.com/de/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67400
+Non-OK status: 403 --- legal/contact/index.html --> https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67400
+Non-OK status: 403 --- legal/contact/index.html --> https://pixabay.com/service/terms/#license
+Non-OK status: 999 --- legal/contact/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- legal/contact/index.html --> legal/mit-license.htmls
+target does not exist --- legal/copyright/index.html --> /software/
+Non-OK status: 403 --- legal/copyright/index.html --> https://pixabay.com/de/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67400
+Non-OK status: 403 --- legal/copyright/index.html --> https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67400
+Non-OK status: 403 --- legal/copyright/index.html --> https://pixabay.com/service/terms/#license
+target does not exist --- legal/copyright/index.html --> legal/mit-license.htmls
+Non-OK status: 999 --- legal/copyright/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- legal/copyright/index.html --> legal/mit-license.htmls
+target does not exist --- legal/privacy/index.html --> /software/
+Non-OK status: 403 --- legal/privacy/index.html --> https://pixabay.com/de/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67400
+Non-OK status: 403 --- legal/privacy/index.html --> https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=67400
+Non-OK status: 403 --- legal/privacy/index.html --> https://pixabay.com/service/terms/#license
+target is a directory, href lacks trailing slash --- legal/privacy/index.html --> /legal/contact
+target is a directory, href lacks trailing slash --- legal/privacy/index.html --> /legal/contact
+target is a directory, href lacks trailing slash --- legal/privacy/index.html --> /legal/contact
+Non-OK status: 999 --- legal/privacy/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- legal/privacy/index.html --> legal/mit-license.htmls
+target does not exist --- legal/index.html --> /software/
+Non-OK status: 404 --- legal/index.html --> https://thesystemicprogrammer.org/legal/credits/
+Non-OK status: 999 --- legal/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- legal/index.html --> legal/mit-license.htmls
+Not Found [rel="canonical"] --- legal/credits/index.html --> https://thesystemicprogrammer.org/legal/credits/
+target does not exist --- legal/credits/index.html --> /software/
+Non-OK status: 403 --- legal/credits/index.html --> https://pixabay.com/
+Non-OK status: 999 --- legal/credits/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- legal/credits/index.html --> legal/mit-license.htmls
+target does not exist --- pathways/index.html --> /software/
+Non-OK status: 999 --- pathways/index.html --> https://www.linkedin.com/in/thomas-berchtold
+target does not exist --- pathways/index.html --> legal/mit-license.htmls
