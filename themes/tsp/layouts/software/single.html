@@ -1,0 +1,35 @@
+{{ define "main" }}
+{{ $topic := index (.Params.topics) 0 }}
+{{ partial "hero.html" (dict "context" $.Page "defaultimage" .Params.heroimage)}}
+
+<div class="container">
+    <section class="section">
+        <article>
+            <div class="content mt-3">
+                <div class="columns">
+                    <div class="column is-rest">
+                        <h1 class="title is-2">{{ .Title }}</h1>
+                        <p class="mb-4">{{ .Params.description }}</p>
+                        <p class="mb-6">
+                            <a class="button is-success" href="{{ .Params.github }}"
+                                aria-label="View project on GitHub">
+                                <span><i class="fab fa-github" style="font-size:1.6rem"></i></span>
+                                <span class="ml-1 mr-2 has-text-weight-semibold">View on GitHub</span>
+                            </a>
+                        </p>
+                        {{ .Content }}
+                    </div>
+                    <div class="is-hidden-mobile" style="width: 18rem; padding-left: 2rem; margin-top: 5rem; margin-right: -4rem;">
+                        <aside class="menu" style="position: sticky; top: 5rem;">
+                            <p class="menu-label">Table of Contents</p>
+                            <div class="menu-list">
+                                {{ .TableOfContents }}
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </article>
+</div>
+
+{{ end }}

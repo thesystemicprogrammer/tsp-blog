@@ -26,10 +26,10 @@
                                 {{ else }} minutes {{ end }}
                                 <i class="far fa-eye ml-2"></i>
                                 {{ $views := index .Site.Data.pageviews .RelPermalink }}
-                                {{ if lt $views.pageviews 0 }}
+                                {{ if lt $views.views 0 }}
                                 less than 20
                                 {{ else }}
-                                {{ $views.pageviews }}
+                                {{ $views.views }}
                                 {{ end }}
                             </p>
                         </div>
@@ -73,10 +73,11 @@
 
         <hr class="mt-6">
         <div class="content">
-            <h2>Leave a comment</h2>
-            <p>Commenting functionality will be added soon!</p>
+            <h2>Leave a Comment</h2>
         </div>
-        </script>
+        
+        {{ partial "comments.html" . }}
+
     </section>
 </div>
 

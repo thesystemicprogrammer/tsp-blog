@@ -16,6 +16,8 @@ var idx = lunr(function () {
     this.field('tags')
     this.field('content')
 
+    this.metadataWhitelist = ['position']
+
     indexJson.forEach(function (doc) {
         this.add(doc)
     }, this)

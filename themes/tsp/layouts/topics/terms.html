@@ -2,19 +2,21 @@
 <div class="container">
     <div class="section">
         <div class="content">
-            <h1 class="title is-2">{{ .Title }}</h1>
+            <h1 class="title is-2">Blog Main Topics</h1>
             {{ .Content }}
         </div>
 
         <div class="columns is-8 is-variable is-multiline mb-5">
             {{ range .Data.Terms.ByCount }}
+            {{ if ne .Page.Title "Software"}}
             <div class="column is-half">
                 <div class="card mt-5" style="background-color:rgb(245, 245, 245);">
                     <div class="card-image">
                         <figure class="image is-3by1">
-                          <img src="/images/hero/code-small.webp" alt="Card Image">
+                            {{ $image := index site.Data.categoryimage .Page.Title }}
+                            <img src="/images/hero/{{$image}}-small.webp" alt="Card Image">
                         </figure>
-                      </div>
+                    </div>
                     <div class="card-content has-text-centered">
                         <div>
                             <a class="title is-3 is-size-6-mobile" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
@@ -24,6 +26,7 @@
                     </div>
                 </div>
             </div>
+            {{ end }}
             {{ end }}
         </div>
     </div>

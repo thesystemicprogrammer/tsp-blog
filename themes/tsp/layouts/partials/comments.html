@@ -1,0 +1,176 @@
+<div class="control">
+    <button class="button is-link modal-button mt-3" onclick="showFormDialog(null)">Create a new comment</button>
+</div>
+
+<div class="mt-6 p-2" style="border: #e0dfdf 1px solid; border-radius: 0.3rem;">
+
+    <div class="p-3" style="border-bottom: #e0dfdf 1px solid;">
+        <div class="has-text-weight-semibold">Thomas Berchtold</div>
+        <div class="is-size-7">3 days ago</div>
+        <p class="mt-4">This text is great. Thanks for sharing this thought.</p>
+        <p class="mt-2 is-size-7"><a href="#" onclick="showFormDialog(1)"><i class="fab fa-reply"></i>Reply</a></p>
+    </div>
+
+    <div class="p-3" style="margin-left: 2rem; border-bottom: #e0dfdf 1px solid;">
+        <div class="has-text-weight-semibold">Thomas Berchtold</div>
+        <div class="is-size-7">3 days ago</div>
+        <p class="mt-4">This text is great. Thanks for sharing this thought.</p>
+        <p class="mt-2 is-size-7"><a href="#"><i class="fab fa-reply"></i>Reply</a></p>
+    </div>
+
+    <div class="p-3" style="margin-left: 4rem;">
+        <div class="has-text-weight-semibold">Thomas Berchtold</div>
+        <div class="is-size-7">3 days ago</div>
+        <p class="mt-4">This text is great. Thanks for sharing this thought.</p>
+        <p class="mt-2 is-size-7"><a href="#"><i class="fab fa-reply"></i>Reply</a></p>
+    </div>
+
+</div>
+
+<div class="mt-2 p-2" style="border: #e0dfdf 1px solid;">
+
+    <div class="p-3">
+        <div class="has-text-weight-semibold">Thomas Berchtold</div>
+        <div class="is-size-7 timeago" datetime="2016-07-07T09:24:17Z">July 07, 2016</div>
+        <p class="mt-4">This text is great. Thanks for sharing this thought.</p>
+        <p class="mt-2 is-size-7"><a href="#"><i class="fab fa-reply"></i>Reply</a></p>
+    </div>
+</div>
+
+<div id="form-dialog" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p id="form-dialog-title" class="modal-card-title">Create a new comment</p>
+            <button class="delete" aria-label="close" onclick="hideFormDialog()"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="content">
+                <input type="hidden" id="comment-id">
+                <div class="field">
+                    <label class="label">Name/Alias</label>
+                    <div class="control">
+                        <input id="name" class="input" type="text" placeholder="" style="max-width: 40em;">
+                    </div>
+                    <p id="error-name-missing" class="help is-invisible is-danger">Please provide a name or an alias!
+                    </p>
+                </div>
+                <div class="field">
+                    <label class="label">EMail</label>
+                    <div class="control">
+                        <input id="email" class="input" type="text" placeholder="" style="max-width: 40em;">
+                    </div>
+                    <p id="error-email-invalid" class="help is-invisible is-danger">The provided EMail address is
+                        invalid!</p>
+                </div>
+                <div class="field">
+                    <label class="label">Your Comment</label>
+                    <p class="control">
+                        <textarea id="comment" class="textarea" placeholder="Add your comment..."></textarea>
+                    </p>
+                    <p id="error-comment-missing" class="help is-invisible is-danger">Please provide a your comment!</p>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <label class="checkbox">
+                            <input id="accept" type="checkbox">
+                            I understand and agree to this site's <a href="/legal/commenting/">commenting terms and
+                                policy</a>.
+                        </label>
+                        <p id="error-accept-missing" class="help is-invisible is-danger">Please agree on commenting
+                            terms and
+                            policy!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" onclick="processComment()">Post comment</button>
+            <button class="button" onclick="hideFormDialog()">Cancel</button>
+        </footer>
+    </div>
+</div>
+
+
+
+<script defer src="/js/timeago.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        timeago.render(document.querySelectorAll('.timeago'));
+    });
+
+    function showFormDialog(commentId) {
+        if (!commentId) {
+            document.getElementById("form-dialog-title").innerText = "Create new comment"
+        } else {
+            document.getElementById("form-dialog-title").innerText = "Reply to comment"
+        }
+        document.getElementById("form-dialog").classList.add('is-active');
+    }
+
+    function hideFormDialog() {
+        document.getElementById("form-dialog").classList.remove('is-active');
+    }
+
+    function processComment() {
+
+        var isValid = true;
+
+        var name = document.getElementById('name');
+        if (name.value == '') {
+            showErrorBorder(name);
+            showElement('error-name-missing');
+            isValid = false;
+        } else {
+            hideErrorBorder(name);
+            hideElement('error-name-missing');
+        }
+
+        var email = document.getElementById('email');
+        if (email.value == '' || isEmailAddressValid(email.value)) {
+            hideErrorBorder(email);
+            hideElement('error-email-invalid');
+        } else {
+            showErrorBorder(email);
+            showElement('error-email-invalid');
+            isValid = false;
+        }
+
+        var comment = document.getElementById('comment');
+        if (comment.value == false) {
+            showErrorBorder(comment);
+            showElement('error-comment-missing');
+            isValid = false;
+        } else {
+            hideErrorBorder(comment);
+            hideElement('error-comment-missing');
+        }
+
+        if (!document.getElementById('accept').checked) {
+            showElement('error-accept-missing');
+            isValid = false;
+        } else {
+            hideElement('error-accept-missing');
+        }
+    }
+
+    function isEmailAddressValid(email) {
+        return email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    }
+
+    function showElement(name) {
+        document.getElementById(name).classList.remove('is-invisible');
+    }
+
+    function hideElement(name) {
+        document.getElementById(name).classList.add('is-invisible');
+    }
+
+    function showErrorBorder(element) {
+        element.classList.add('is-danger');
+    }
+
+    function hideErrorBorder(element) {
+        element.classList.remove('is-danger');
+    }
+</script>

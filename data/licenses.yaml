@@ -4,4 +4,7 @@ pixabay:
 unsplash:
   name: Unsplash License
   link: https://unsplash.com/license
+pexel:
+  name: Pexel License
+  link: https://www.pexels.com/license/
   
