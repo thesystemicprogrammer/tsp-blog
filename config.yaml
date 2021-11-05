@@ -53,7 +53,8 @@ params:
   showHeroForSinglePost: false
   searchSections: ["blog", "software"]
   citations: false
-  github: https://github.com/thesystemicprogrammer
+  repo: tsp-blog
+  owner: thesystemicprogrammer
 
 
 outputFormats:

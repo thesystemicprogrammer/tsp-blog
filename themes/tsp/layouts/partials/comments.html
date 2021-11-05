@@ -50,7 +50,7 @@
                 <div class="field">
                     <label class="label">Name/Alias</label>
                     <div class="control">
-                        <input id="name" class="input" type="text" placeholder="" style="max-width: 40em;">
+                        <input id="name" class="input" type="text" placeholder="" maxlength="100" style="max-width: 40em;">
                     </div>
                     <p id="error-name-missing" class="help is-invisible is-danger">Please provide a name or an alias!
                     </p>
@@ -58,7 +58,7 @@
                 <div class="field">
                     <label class="label">EMail</label>
                     <div class="control">
-                        <input id="email" class="input" type="text" placeholder="" style="max-width: 40em;">
+                        <input id="email" class="input" type="text" placeholder="" maxlength="200" style="max-width: 40em;">
                     </div>
                     <p id="error-email-invalid" class="help is-invisible is-danger">The provided EMail address is
                         invalid!</p>
@@ -66,7 +66,7 @@
                 <div class="field">
                     <label class="label">Your Comment</label>
                     <p class="control">
-                        <textarea id="comment" class="textarea" placeholder="Add your comment..."></textarea>
+                        <textarea id="comment" class="textarea" placeholder="Add your comment..." maxlenght="1000"></textarea>
                     </p>
                     <p id="error-comment-missing" class="help is-invisible is-danger">Please provide a your comment!</p>
                 </div>
@@ -110,6 +110,11 @@
 
     function hideFormDialog() {
         document.getElementById("form-dialog").classList.remove('is-active');
+
+        removeValueAndError('name', 'error-name-missing', 'text');
+        removeValueAndError('email', 'error-email-invalid', 'text');
+        removeValueAndError('comment', 'error-comment-missing', 'text');
+        removeValueAndError('accept', 'error-accept-missing', 'checkbox');
     }
 
     function processComment() {
@@ -173,4 +178,17 @@
     function hideErrorBorder(element) {
         element.classList.remove('is-danger');
     }
+
+    function removeValueAndError(name, errorName, type) {
+        element = document.getElementById(name);
+        if (type == 'text') {
+            element.value = '';
+        } else {
+            document.getElementById('accept').checked  = false;
+        }
+
+        hideErrorBorder(element);
+        hideElement(errorName);
+    }
+
 </script>

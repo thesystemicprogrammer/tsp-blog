@@ -7,7 +7,7 @@ topics:
 draft: true
 heroimage: pageviews
 weight: 200
-github: https://github.com/thesystemicprogrammer/php-simple-pageview-stats
+repo: php-simple-pageview-stats
 description: >
     A small PHP script based on Lumen that provides an API to collect pageview statistics for websites quickly and in a privacy-friendly way.  
 
