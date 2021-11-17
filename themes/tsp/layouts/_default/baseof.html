@@ -14,8 +14,10 @@
             console.log("Running under localhost, no pageview request sent");
         } else {
             var request = new XMLHttpRequest();
-            request.open("POST", "https://tombersoft.com/pageview/api/public/pageview", true);
+            request.open("POST", "https://tombersoft.com/pageview/api/pageview", true);
             request.setRequestHeader('Content-Type', 'application/json');
+            request.setRequestHeader("X-API-KEY", "2ojnTnFnEH2TqZhgIksd0kmkHnPWd8wc");
+
             request.send(JSON.stringify({
                 uri: location.pathname
             }));

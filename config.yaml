@@ -5,6 +5,10 @@ theme:
   - tsp
   - hugo-cite
 
+ignoreErrors: 
+  - error-remote-getjson
+
+
 menu:
   main:
     - name: Blog
@@ -68,3 +72,7 @@ outputFormats:
 outputs:
   home: ["HTML","RSS", "Lunr"]
   page: ["HTML", "Lunr"]
+
+caches:
+  getjson:
+    maxAge: 0

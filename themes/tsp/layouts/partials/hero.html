@@ -1,5 +1,5 @@
 {{ if site.Params.showHero }}
-    {{ $img := "" }}
+    {{ $img := ""}}
     {{ if (isset .context.Page.Params "heroimage") }}
         {{ $img = .context.Page.Params.heroimage }}
     {{ else if (isset . "defaultimage") }}
@@ -7,12 +7,12 @@
     {{ end }}
 
     {{ with $img }}
-    <div class="hero is-medium is-light is-bold" style="background-image: url('/images/hero/{{ . }}.webp'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-        <div class="hero-body">
+        <div class="hero is-medium is-light is-bold" style="background-image: url('/images/hero/{{ . }}.webp'); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+            <div class="hero-body">
+            </div>
         </div>
-    </div>
+         {{ with index site.Data.images . }}
 
-        {{ with index site.Data.images . }}
         <p class="ml-1 is-size-7">
             Image by
             <a href="{{ .authorlink }}">{{ .authorname }}</a>

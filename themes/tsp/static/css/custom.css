@@ -20,3 +20,10 @@ main {
     width: 48px;
     height: 48px;
 }
+
+.comment-line {
+    background-image: linear-gradient(lightgrey ,lightgrey);
+    background-size: 3px 100%;
+    background-repeat: no-repeat;
+    background-position: 2.1rem 4.2rem;
+}

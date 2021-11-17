@@ -24,12 +24,10 @@
                                 <time><i class="far fa-calendar"></i>{{ .PublishDate.Format "January 2, 2006" }}</time>
                                 <i class="far fa-clock ml-2"></i> {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute
                                 {{ else }} minutes {{ end }}
-                                <i class="far fa-eye ml-2"></i>
                                 {{ $views := index .Site.Data.pageviews .RelPermalink }}
-                                {{ if lt $views.views 0 }}
-                                less than 20
-                                {{ else }}
-                                {{ $views.views }}
+                                {{ if ne $views.views nil }}
+                                <i class="far fa-eye ml-2"></i>   
+                                {{ $views.views | lang.FormatNumber  0 }}
                                 {{ end }}
                             </p>
                         </div>
