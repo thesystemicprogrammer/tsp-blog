@@ -1,34 +1,16 @@
 ---
-title: "Why is this page called \"The Systemic Programmer\""
-date: 2021-10-18T21:12:44+02:00
+title: "Why a blog and why is it called \"The Systemic Programmer\""
+date: 2021-01-02T21:12:44+02:00
 draft: false
 heroimage: questionmarks
 --- 
 
-It might seem a dichotomy to mix the analytical tasks of programming with the holistic view of systems thinking together in 
-the title of my website. However, I think that software engineering is a very social profession and hence the systemic approaches can be very helpful to create better results. 
+##### What is the motivation behind this blog? And why in the world would anyone name a blog like this? 
 
-<!--more-->
+tl;dr: Writing blog posts helps me to learn more about the topics I cover. So I write about Software Engineering and Systems Thinking, which are of particular interest to me. The name simply reflects the main subjects of this blog. 
 
-## What is Lorem Ipsum?
-In mollis cursus ligula, et venenatis neque maximus ut...
+During my master studies I had to write many assignments. It is extremely difficult to describe a subject precisely and yet understandably in a limited amount of text. I found this extremely tedious and time-consuming at first. On the other hand, I also began to realize how helpful this is for my learning process and for my self-reflection: It is essential that I have first gained a thorough understanding of a concept, method or whatever before I can describe it correctly and comprehensively in a text. Hence, in the spirit of Aristotle's views on teaching and understanding, I would argue that blog writing can be considered a means of achieving advanced understanding in the relevant field. And please, don't get me wrong: I'm not trying to imply that this blog is now a collection of masterpieces. It just helps me on my learning journey and only shows my current level of understanding, the current position on my trajectory. To what extent the required understanding really existed and manifested itself in a convincing post is, of course, left to the sole judgement of the reader.  
 
-Vivamus ut tincidunt urna. Nam eu mollis dolor...
+Thus, the topics of the blog were also found quickly: There are two areas that have always fascinated me and about which I absolutely want to learn more: Software Engineering and Systems Thinking. I work as a software engineer, which obviously explains my interest in this field. But also my interest in Systems Thinking emerged from my job. I think that Software Engineering is a deeply social profession, as we are constantly working in and with complex social systems, such as our team, other departments in our organization, or customers and authorities. I did not understand why I could not better analyze certain situations in my activities as a software engineer with classical engineering methods or why certain measures did not achieve the predicted effect. It was only after a lecture in Systems Thinking, which I attended rather by chance, when I slowly began to understand that complex problems require completely different approaches (it was actually the first time I become aware between the distinction of a simple, complicated and complex system at all). Therefore, I consider Systems Thinking a wonderful and powerful extension of my toolbox as a software engineer. Now I just needed a name, which somehow reflects the general theme of this blog. After some consideration, I decided to use "The Systemic Programmer". 
 
-## In mollis cursus ligula
-Etiam et ligula sit amet urna aliquam suscipit...
-
-```java {linenos=true}
-public String getNewTask(int level) {
-    System.out.println("Hello");
-}
-```
-
-- Cras dui nulla,
-- ornare eget fermentum quis, 
-- accumsan vitae purus.
-
-Nam eget pharetra arcu. Cras dui nulla, ornare eget...
-
-### Nullam a risus maximus
-Fusce facilisis non ante quis blandit...
+I have been considering this idea of building a blog for a long time and the domain name was reserved quite a while ago. But as an engineer, I preferred to deal with the technical side of things rather than concentrating on writing articles. So I kept spending hours choosing the right CMS, building templates and adding functionality with custom scripts I wrote myself. The main concern, the writing of texts, moved more and more into the background. After a while, I usually lost the interest or other higher prioritized activities took precedence. I am very happy that it has finally worked out in the 5th or 6th attempt and that some blog posts are already online. Maybe one or the other article will also be relevant and helpful for a visitor's personal learning journey, which of course would make me extremely happy! 
