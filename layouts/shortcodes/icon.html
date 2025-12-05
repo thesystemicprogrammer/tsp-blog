@@ -1,0 +1,12 @@
+{{- $name := .Get 0 -}}
+{{- $class := .Get "class" | default "" -}}
+{{- $size := .Get "size" | default "24" -}}
+{{- $iconPath := printf "icons/%s.svg" $name -}}
+{{- $icon := resources.Get $iconPath -}}
+{{- if $icon -}}
+  {{- $content := $icon.Content | safeHTML -}}
+  {{- $content = replace $content "<svg" (printf "<svg class=\"inline-block %s\" width=\"%s\" height=\"%s\"" $class $size $size) -}}
+  {{- $content | safeHTML -}}
+{{- else -}}
+  <!-- Icon not found: {{ $name }} -->
+{{- end -}}
