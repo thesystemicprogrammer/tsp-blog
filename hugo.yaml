@@ -2,8 +2,18 @@ baseURL: "https://example.org/"
 languageCode: "en-us"
 title: "The Systemic Programmer"
 
+pagination:
+  pagerSize: 7
+
+taxonomies:
+  category: categories
+  tag: tags
+
 params:
   author: "Thomas Berchtold"
+  social:
+    github: "https://github.com/thesystemicprogrammer"
+    linkedin: "https://linkedin.com/in/yourusername"
 
 build:
   buildStats:

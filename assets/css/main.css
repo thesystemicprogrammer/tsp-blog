@@ -1,8 +1,152 @@
 @import "tailwindcss";
-@source "hugo_stats.json";
+@source "../../layouts/**/*.html";
+@source "../../content/**/*.md";
 
 @theme {
   --font-family-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Article content styling */
+.article-content h1 {
+  @apply text-4xl font-bold mt-12 mb-6 tracking-tight text-gray-900 dark:text-gray-100;
+}
+
+.article-content h2 {
+  @apply text-3xl font-bold mt-12 mb-6 tracking-tight text-gray-900 dark:text-gray-100;
+}
+
+.article-content h3 {
+  @apply text-2xl font-bold mt-8 mb-4 tracking-tight text-gray-900 dark:text-gray-100;
+}
+
+.article-content h4 {
+  @apply text-xl font-bold mt-6 mb-3 tracking-tight text-gray-900 dark:text-gray-100;
+}
+
+.article-content h5 {
+  @apply text-lg font-bold mt-4 mb-2 tracking-tight text-gray-900 dark:text-gray-100;
+}
+
+.article-content h6 {
+  @apply text-base font-bold mt-4 mb-2 tracking-tight text-gray-900 dark:text-gray-100;
+}
+
+.article-content p {
+  @apply mb-6 leading-relaxed;
+}
+
+.article-content a {
+  @apply text-blue-600 dark:text-blue-400 no-underline hover:underline;
+}
+
+.article-content strong {
+  @apply font-semibold text-gray-900 dark:text-gray-100;
+}
+
+.article-content em {
+  @apply italic;
+}
+
+.article-content code {
+  @apply text-pink-600 dark:text-pink-400 bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-sm;
+}
+
+.article-content pre {
+  @apply bg-gray-900 dark:bg-gray-950 border border-gray-700 rounded-lg p-4 overflow-x-auto mb-6;
+}
+
+.article-content pre code {
+  @apply text-gray-100 bg-transparent p-0;
+}
+
+.article-content blockquote {
+  @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic my-6 text-gray-700 dark:text-gray-400;
+}
+
+.article-content ul {
+  @apply my-6 list-disc list-inside;
+}
+
+.article-content ol {
+  @apply my-6 list-decimal list-inside;
+}
+
+.article-content li {
+  @apply my-2;
+}
+
+.article-content img {
+  @apply rounded-lg shadow-lg mx-auto my-8 max-w-full;
+}
+
+.article-content table {
+  @apply w-full border-collapse my-8;
+}
+
+.article-content th {
+  @apply bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 px-4 py-2 text-left font-semibold;
+}
+
+.article-content td {
+  @apply border border-gray-300 dark:border-gray-700 px-4 py-2;
+}
+
+.article-content hr {
+  @apply my-8 border-gray-300 dark:border-gray-700;
+}
+
+/* Smooth transitions for interactive elements */
+a, button {
+  @apply transition-colors duration-200;
+}
+
+/* Remove focus ring from all links and buttons */
+a:focus, button:focus {
+  @apply outline-none;
+}
+
+a:focus-visible, button:focus-visible {
+  @apply outline-none;
+}
+
+/* Ensure sidebar is scrollable if content is long */
+@media (min-width: 1024px) {
+  .sidebar-sticky {
+    @apply sticky top-4 max-h-screen overflow-y-auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+  }
+  
+  .sidebar-sticky::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .sidebar-sticky::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .sidebar-sticky::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175, 0.5);
+    border-radius: 3px;
+  }
+}
+
+/* Pagination responsive */
+@media (max-width: 640px) {
+  nav[aria-label="Pagination"] {
+    @apply text-sm;
+  }
+  
+  nav[aria-label="Pagination"] a,
+  nav[aria-label="Pagination"] span {
+    @apply px-3 py-1.5;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
 }
 
 /* Roboto Font Faces */

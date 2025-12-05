@@ -1,0 +1,37 @@
+{{- $pageUrl := .RelPermalink -}}
+{{- $uniqueId := printf "viewcount-%s" (.File.UniqueID | default (md5 $pageUrl)) -}}
+
+<span class="view-count flex items-center gap-1" 
+      id="{{ $uniqueId }}"
+      data-page="{{ $pageUrl }}">
+  <!-- Eye icon (matching existing SVG style) -->
+  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+  </svg>
+  <span class="count">...</span>
+</span>
+
+<script>
+(function() {
+  const elem = document.getElementById('{{ $uniqueId }}');
+  const pageUrl = elem.getAttribute('data-page');
+  const countSpan = elem.querySelector('.count');
+  
+  // Fetch view count from API (read-only, no increment for card view)
+  fetch('/api/counter/count.php?page=' + encodeURIComponent(pageUrl))
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        countSpan.textContent = data.formatted + ' views';
+      } else {
+        countSpan.textContent = '-- views';
+      }
+    })
+    .catch(error => {
+      countSpan.textContent = '-- views';
+    });
+})();
+</script>
