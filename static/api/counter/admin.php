@@ -15,7 +15,39 @@
 session_start();
 
 // Load configuration
-$config = require_once __DIR__ . '/db-config.php';
+try {
+    // Load security-sensitive credentials from outside web root
+    $credentialsFile = __DIR__ . '/../../../php_api_config.php';
+    if (!file_exists($credentialsFile)) {
+        throw new Exception('Configuration file not found. Please ensure php_api_config.php exists in the correct location.');
+    }
+    $credentials = require_once $credentialsFile;
+    
+    // Load API configuration
+    $apiConfig = require_once __DIR__ . '/config.php';
+    
+    // Merge configurations (credentials override any defaults)
+    $config = array_merge($apiConfig, $credentials);
+    
+    // Validate required credentials exist
+    $requiredFields = ['host', 'database', 'username', 'password', 'admin_password'];
+    foreach ($requiredFields as $field) {
+        if (empty($config[$field])) {
+            throw new Exception("Required configuration field '$field' is missing.");
+        }
+    }
+    
+} catch (Exception $e) {
+    // Graceful error handling - show error in login page
+    error_log('Admin config error: ' . $e->getMessage());
+    $error = 'Configuration error. Please contact the site administrator.';
+    if (($config['debug_enabled'] ?? false)) {
+        $error .= ' (Debug: ' . $e->getMessage() . ')';
+    }
+    // Set minimal config to prevent further errors in HTML rendering
+    $config = $config ?? ['debug_enabled' => false];
+    $authenticated = false;
+}
 
 // Handle login
 if (isset($_POST['password'])) {

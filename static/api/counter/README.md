@@ -19,12 +19,16 @@ You now have a fully functional, privacy-first page view counter system that:
 ### Backend (PHP + MariaDB)
 ```
 static/api/counter/
-├── init.sql           # Database initialization script
-├── db-config.php      # Database credentials & settings
-├── count.php          # Main API endpoint
-├── admin.php          # Admin dashboard
-└── .htaccess          # Security configuration
+├── init.sql                       # Database initialization script
+├── config.php                     # API configuration (non-sensitive)
+├── php_api_config.php_template    # Template for credentials file
+├── count.php                      # Main API endpoint
+├── admin.php                      # Admin dashboard
+├── top-posts.php                  # Top posts endpoint
+└── .htaccess                      # Security configuration
 ```
+
+**Note:** Database credentials are stored in `php_api_config.php` outside the web root (not in git).
 
 ### Frontend (Hugo Templates)
 ```
@@ -46,6 +50,103 @@ content/
 
 ## 🚀 Installation Steps
 
+### Step 0: Create Secure Credentials File (DO THIS FIRST!)
+
+**IMPORTANT:** This must be done BEFORE deploying the application.
+
+#### 1. Connect to your server via SSH or FTP
+
+```bash
+ssh youruser@thesystemicprogrammer.org
+```
+
+#### 2. Navigate to the directory ONE LEVEL ABOVE your web root
+
+```bash
+cd ~/public_html
+# You should be in public_html/, NOT public_html/tsp/
+pwd  # Should show: /home/youruser/public_html
+```
+
+#### 3. Create the credentials file
+
+```bash
+nano php_api_config.php
+```
+
+#### 4. Copy and fill in the template
+
+Use the template from `static/api/counter/php_api_config.php_template` and fill in these fields:
+
+| Field | Description | Where to Find | Example |
+|-------|-------------|---------------|---------|
+| `host` | Database server | Usually 'localhost' for shared hosting | `localhost` |
+| `database` | Database name | cPanel → MySQL Databases | `tomber_tspblog` |
+| `username` | Database username | cPanel → MySQL Databases | `tomber_tspblog` |
+| `password` | Database password | You set this when creating the DB user | `YourSecurePass123!` |
+| `charset` | Character encoding | Leave as shown in template | `utf8mb4` |
+| `admin_password` | Dashboard password | Create a strong password (12+ chars) | `AdminPass456!@#` |
+
+**Complete template:**
+
+```php
+<?php
+return [
+    // Database Credentials
+    'host' => 'localhost',
+    'database' => 'YOUR_DATABASE_NAME',
+    'username' => 'YOUR_DATABASE_USERNAME',
+    'password' => 'YOUR_DATABASE_PASSWORD',
+    'charset' => 'utf8mb4',
+    
+    // Admin Dashboard Security
+    'admin_password' => 'YOUR_ADMIN_PASSWORD',
+];
+```
+
+**Replace all `YOUR_*` placeholders with your actual values!**
+
+#### 5. Set secure file permissions
+
+```bash
+chmod 600 ~/public_html/php_api_config.php
+```
+
+This ensures ONLY your user account can read the file (not even other users on the shared server).
+
+#### 6. Verify file location and permissions
+
+```bash
+# Check file exists
+ls -la ~/public_html/php_api_config.php
+
+# Should show: -rw------- 1 youruser yourgroup ... php_api_config.php
+#              ^^^^^^^^^
+#              These permissions (600) are correct!
+```
+
+#### 7. Verify PHP syntax is valid
+
+```bash
+php -l ~/public_html/php_api_config.php
+# Should output: No syntax errors detected in /home/youruser/public_html/php_api_config.php
+```
+
+#### 8. Test file is NOT web-accessible
+
+```bash
+# Try to access via web (should fail)
+curl https://thesystemicprogrammer.org/../php_api_config.php
+# Expected: 403 Forbidden or 404 Not Found ✅
+
+curl https://thesystemicprogrammer.org/php_api_config.php  
+# Expected: 404 Not Found ✅
+```
+
+**✅ Security Check Passed:** If both curl commands return 403/404, your credentials file is properly secured!
+
+---
+
 ### Step 1: Setup Database
 
 1. **Log into phpMyAdmin** on your shared hosting
@@ -58,22 +159,17 @@ content/
    - `dedup_hashes`
    - `view_history`
 
-### Step 2: Configure Security
+### Step 2: Verify Configuration
 
-1. **Edit** `static/api/counter/db-config.php`:
-   ```php
-   'admin_password' => 'ChangeThisSecurePassword123!',  // Line 70
-   ```
-   Change to a strong, unique password
+The database credentials and admin password are now configured in `php_api_config.php` (outside web root).
 
-2. **Set debug mode** (line 80):
-   ```php
-   'debug_enabled' => true,   // For testing
-   // Change to false after deployment:
-   'debug_enabled' => false,  // Production
-   ```
+API behavior settings are in `static/api/counter/config.php` (in git, deployed with your site).
+
+**No additional configuration needed** - the sensitive parameters are already set in Step 0!
 
 ### Step 3: Deploy to Server
+
+**IMPORTANT:** Make sure you completed Step 0 (created `php_api_config.php`) BEFORE deploying!
 
 Your GitHub Actions workflow will automatically deploy the files when you push to your repository.
 
@@ -82,13 +178,18 @@ Your GitHub Actions workflow will automatically deploy the files when you push t
 - Updated templates → part of Hugo build
 - Updated privacy.md → part of Hugo build
 
+**Note:** The `php_api_config.php` file is NOT deployed (it's not in git). You created it manually in Step 0.
+
 **After deployment**, verify file permissions via SSH:
 ```bash
 cd /path/to/your/site
 chmod 755 static/api/counter
 chmod 644 static/api/counter/*.php
 chmod 644 static/api/counter/.htaccess
-chmod 600 static/api/counter/db-config.php  # Extra protection
+
+# Verify credentials file is still secure
+chmod 600 ~/public_html/php_api_config.php
+ls -la ~/public_html/php_api_config.php  # Should show: -rw-------
 ```
 
 ### Step 4: Test the System
@@ -145,9 +246,12 @@ curl "https://thesystemicprogrammer.org/api/counter/count.php?page=/posts/test/&
 
 ## 🔧 Configuration Options
 
+**Note:** These settings are in `static/api/counter/config.php` (API behavior settings).  
+Database credentials are in `~/public_html/php_api_config.php` (outside web root, not in git).
+
 ### Adjust Deduplication Window
 
-Edit `static/api/counter/db-config.php`:
+Edit `static/api/counter/config.php`:
 ```php
 'dedup_window' => 900,  // 15 minutes (in seconds)
 // Options:
@@ -208,10 +312,117 @@ DELETE FROM dedup_hashes WHERE timestamp < DATE_SUB(NOW(), INTERVAL 15 MINUTE);
 
 ## 🐛 Troubleshooting
 
-### Issue: "Database connection failed"
+### Issue: "Configuration file not found"
+
+**Error message in browser:** "Configuration error. Please contact the site administrator."
+
+**Error message in logs:** "Configuration file not found. Please ensure php_api_config.php exists in the correct location."
 
 **Solution:**
-1. Verify database credentials in `db-config.php`
+
+1. Verify file exists:
+   ```bash
+   ls -la ~/public_html/php_api_config.php
+   ```
+   
+   If file doesn't exist, go back to **Step 0** above and create it.
+
+2. Verify path structure matches expected deployment:
+   ```bash
+   # Your credentials config should be here:
+   ~/public_html/php_api_config.php
+   
+   # Your API files should be here:
+   ~/public_html/tsp/api/counter/count.php
+   ~/public_html/tsp/api/counter/admin.php
+   ~/public_html/tsp/api/counter/top-posts.php
+   ```
+   
+   The path from API files to config is: `../../../php_api_config.php`
+
+3. Verify file permissions (should be 600):
+   ```bash
+   stat ~/public_html/php_api_config.php
+   # Output should include: Access: (0600/-rw-------)
+   ```
+   
+   If wrong, fix with:
+   ```bash
+   chmod 600 ~/public_html/php_api_config.php
+   ```
+
+4. Verify file contains valid PHP syntax:
+   ```bash
+   php -l ~/public_html/php_api_config.php
+   # Should output: No syntax errors detected in ...
+   ```
+   
+   If syntax errors, edit the file and fix them:
+   ```bash
+   nano ~/public_html/php_api_config.php
+   ```
+
+5. Test the relative path resolution from API directory:
+   ```bash
+   cd ~/public_html/tsp/api/counter
+   php -r "var_dump(file_exists(__DIR__ . '/../../../php_api_config.php'));"
+   # Should output: bool(true)
+   ```
+   
+   If returns `bool(false)`, your directory structure doesn't match expectations.
+
+---
+
+### Issue: "Required configuration field 'X' is missing"
+
+**Error message:** "Required configuration field 'host' is missing." (or database, username, password, admin_password)
+
+**Cause:** Your `php_api_config.php` is missing required fields or has placeholder values.
+
+**Solution:**
+
+1. Check file contains all required fields:
+   ```bash
+   grep -E "(host|database|username|password|admin_password)" ~/public_html/php_api_config.php
+   ```
+   
+   Should show all 6 fields with actual values.
+
+2. Ensure no fields are still set to placeholders:
+   ```bash
+   grep -i "YOUR_" ~/public_html/php_api_config.php
+   # Should return NOTHING (no matches)
+   ```
+   
+   If you see `YOUR_DATABASE_NAME` or similar, you forgot to fill in actual values!
+
+3. Compare your file against the template:
+   - Template location: `static/api/counter/php_api_config.php_template`
+   - Verify all fields are present and filled with actual values
+
+4. **Required fields checklist:**
+   ```php
+   'host' => 'localhost',              // ✓ Usually 'localhost'
+   'database' => 'actual_db_name',     // ✓ Your database name (NOT 'YOUR_DATABASE_NAME')
+   'username' => 'actual_username',    // ✓ Your database user (NOT 'YOUR_DATABASE_USERNAME')
+   'password' => 'actual_password',    // ✓ Your database password (NOT 'YOUR_DATABASE_PASSWORD')
+   'charset' => 'utf8mb4',             // ✓ Must be 'utf8mb4'
+   'admin_password' => 'admin_pass',   // ✓ Your admin password (NOT 'YOUR_ADMIN_PASSWORD')
+   ```
+
+5. Test database connection with provided credentials:
+   ```bash
+   mysql -h localhost -u YOUR_USERNAME -p YOUR_DATABASE
+   # Enter password when prompted
+   # If connection fails, your credentials are wrong
+   ```
+
+---
+
+### Issue: Database connection failed
+
+**Solution:**
+1. Verify database credentials in `php_api_config.php` (NOT config.php)
 2. Check database exists: `tomber_tspblog`
 3. Check user has proper permissions
 4. Test connection via phpMyAdmin
@@ -263,35 +474,124 @@ SELECT COUNT(*) FROM dedup_hashes;
 
 Test:
 ```bash
-curl https://thesystemicprogrammer.org/api/counter/db-config.php
+# Test config.php is protected by .htaccess
+curl https://thesystemicprogrammer.org/api/counter/config.php
+# Should return: 403 Forbidden
+
+# Test php_api_config.php is not accessible (outside web root)
+curl https://thesystemicprogrammer.org/../php_api_config.php
+# Should return: 403 Forbidden or 404 Not Found
+
+curl https://thesystemicprogrammer.org/php_api_config.php
+# Should return: 404 Not Found
 ```
 
-Should return: `403 Forbidden`
+**If config.php returns content instead of 403:**
 
-If not, check `.htaccess`:
+Check `.htaccess`:
 ```apache
-<FilesMatch "^(db-config)\.php$">
+<FilesMatch "^(config)\.php$">
     Order Deny,Allow
     Deny from all
 </FilesMatch>
+```
+
+**If php_api_config.php is accessible via web:**
+
+This means you put it in the WRONG location! It should be:
+- ✅ Correct: `~/public_html/php_api_config.php` (outside web root)
+- ❌ Wrong: `~/public_html/tsp/php_api_config.php` (inside web root)
+
+Move it immediately:
+```bash
+mv ~/public_html/tsp/php_api_config.php ~/public_html/php_api_config.php
+chmod 600 ~/public_html/php_api_config.php
 ```
 
 ---
 
 ## 🔒 Security Best Practices
 
-### 1. Change Admin Password
-```php
-// In db-config.php - use a strong password
-'admin_password' => 'Use-A-Very-Strong-Password-Here-123!@#',
+### 1. Protect Credentials File
+
+```bash
+# Verify file is outside web root (correct location)
+ls ~/public_html/php_api_config.php         # ✅ Should exist
+ls ~/public_html/tsp/php_api_config.php     # ❌ Should NOT exist
+
+# Verify strict permissions (600 = only you can read)
+chmod 600 ~/public_html/php_api_config.php
+stat ~/public_html/php_api_config.php
+# Should show: Access: (0600/-rw-------)
+
+# Verify not in git repository
+cd /path/to/your/local/repo
+git ls-files | grep php_api_config.php
+# Should return: nothing (file not tracked)
+
+# Verify web inaccessibility
+curl https://thesystemicprogrammer.org/../php_api_config.php
+curl https://thesystemicprogrammer.org/php_api_config.php
+# Both should return: 403 Forbidden or 404 Not Found
 ```
 
-### 2. Disable Debug Mode in Production
+### 2. Use Strong Passwords
+
+For admin_password in `php_api_config.php`:
+```php
+// ❌ Bad passwords:
+'admin_password' => 'admin123',
+'admin_password' => 'password',
+'admin_password' => 'ChangeThisSecurePassword123!',  // Default from docs!
+
+// ✅ Good passwords:
+'admin_password' => 'xK9$mL#2pN@v8qR3wT!yZ7',  // Random, 20+ chars
+'admin_password' => 'correct-horse-battery-staple-2025',  // Passphrase
+```
+
+Generate strong passwords:
+```bash
+# Using pwgen (install with: apt-get install pwgen)
+pwgen -s 20 1
+
+# Using OpenSSL
+openssl rand -base64 18
+
+# Using /dev/urandom
+tr -dc 'A-Za-z0-9!@#$%^&*()_+=' < /dev/urandom | head -c 20
+```
+
+### 3. Change Admin Password
+
+To update your admin password:
+
+1. **Edit the credentials file:**
+   ```bash
+   nano ~/public_html/php_api_config.php
+   ```
+
+2. **Update the admin_password field:**
+   ```php
+   'admin_password' => 'YourNewStrongPassword123!',
+   ```
+
+3. **Save and test:**
+   ```bash
+   # Verify syntax
+   php -l ~/public_html/php_api_config.php
+   
+   # Test login at:
+   # https://thesystemicprogrammer.org/api/counter/admin.php
+   ```
+
+### 4. Disable Debug Mode in Production
 ```php
 'debug_enabled' => false,  // Never true in production
 ```
 
-### 3. Enable HTTPS Enforcement (Optional)
+Edit in `static/api/counter/config.php` (the API config file, NOT the credentials file)
+
+### 5. Enable HTTPS Enforcement (Optional)
 Uncomment in `.htaccess`:
 ```apache
 RewriteEngine On
@@ -299,13 +599,13 @@ RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 ```
 
-### 4. Regular Database Backups
+### 6. Regular Database Backups
 ```bash
 # Backup view counts
 mysqldump -u tomber_tspblog -p tomber_tspblog page_views > backup_$(date +%Y%m%d).sql
 ```
 
-### 5. Monitor Error Logs
+### 7. Monitor Error Logs
 Check your hosting's PHP error logs regularly for:
 - Database connection failures
 - Suspicious bot patterns
@@ -444,16 +744,21 @@ OPTIMIZE TABLE view_history;
 ## ✅ Final Checklist
 
 Before going live:
+- [ ] `php_api_config.php` created outside web root (`~/public_html/php_api_config.php`)
+- [ ] `php_api_config.php` filled with actual credentials (no YOUR_* placeholders)
+- [ ] `php_api_config.php` permissions set to 600 (`chmod 600`)
+- [ ] `php_api_config.php` NOT accessible via HTTP (test with curl)
+- [ ] `php_api_config.php` NOT in git repository
 - [ ] Database tables created successfully
-- [ ] Admin password changed from default
-- [ ] Debug mode disabled (`'debug_enabled' => false`)
+- [ ] Admin password is strong and unique (in php_api_config.php)
+- [ ] Debug mode disabled in production (`config.php`: `'debug_enabled' => false`)
 - [ ] API endpoint tested and working
 - [ ] Admin dashboard accessible with password
 - [ ] View counter displays on posts
 - [ ] View counter displays on homepage cards
 - [ ] Privacy policy updated and deployed
-- [ ] `.htaccess` protecting `db-config.php`
-- [ ] File permissions set correctly
+- [ ] `.htaccess` protecting `config.php` (returns 403)
+- [ ] File permissions set correctly on server
 - [ ] SSL/HTTPS working
 - [ ] Tested deduplication (refresh doesn't increment)
 - [ ] Checked browser console for errors

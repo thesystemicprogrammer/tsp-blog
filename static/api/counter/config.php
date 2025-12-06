@@ -1,8 +1,14 @@
 <?php
 /**
- * Database Configuration for Page View Counter
+ * API Configuration for Page View Counter
  * 
- * SECURITY WARNING: This file contains sensitive credentials
+ * NON-SENSITIVE PARAMETERS ONLY
+ * ==============================
+ * Database credentials and admin password are loaded from:
+ * public_html/php_api_config.php (outside web root)
+ * 
+ * This file contains API behavior settings that are safe to version control.
+ * 
  * Protected by .htaccess - should never be accessible via web browser
  * 
  * GDPR Compliance: No personal data is stored or processed
@@ -11,13 +17,19 @@
 
 return [
     // ========================================================================
-    // Database Credentials
+    // Database Credentials - LOADED FROM EXTERNAL FILE
     // ========================================================================
-    'host' => 'localhost',
-    'database' => 'tomber_tspblog',
-    'username' => 'tomber_tspblog',
-    'password' => '{K+3hj#2]}wjt',
-    'charset' => 'utf8mb4',
+    // The following database credentials are loaded from php_api_config.php
+    // (located outside the web root at: public_html/php_api_config.php)
+    //
+    // Fields loaded from external file:
+    // - host         Database server hostname (usually 'localhost')
+    // - database     Database name
+    // - username     Database username
+    // - password     Database password
+    // - charset      Character encoding (utf8mb4)
+    //
+    // See: static/api/counter/php_api_config.php_template for setup instructions
     
     // ========================================================================
     // Application Settings
@@ -71,12 +83,15 @@ return [
     ],
     
     // ========================================================================
-    // Admin Dashboard
+    // Admin Dashboard - PASSWORD LOADED FROM EXTERNAL FILE
     // ========================================================================
-    
-    // Admin password (CHANGE THIS!)
-    // Use a strong, unique password
-    'admin_password' => 'ChangeThisSecurePassword123!',
+    // The admin_password is loaded from php_api_config.php
+    // (located outside the web root at: public_html/php_api_config.php)
+    //
+    // This password protects access to:
+    // https://thesystemicprogrammer.org/api/counter/admin.php
+    //
+    // See: static/api/counter/php_api_config.php_template for setup instructions
     
     // ========================================================================
     // Debug Mode

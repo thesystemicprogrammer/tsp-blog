@@ -3,7 +3,9 @@
 # ============================================================================
 
 # Protect sensitive configuration files from direct web access
-<FilesMatch "^(db-config)\.php$">
+# Note: Database credentials are stored in php_api_config.php outside the web root
+# at: public_html/php_api_config.php (not accessible via HTTP at all)
+<FilesMatch "^(config)\.php$">
     Order Deny,Allow
     Deny from all
 </FilesMatch>

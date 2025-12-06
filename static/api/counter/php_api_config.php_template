@@ -1,0 +1,138 @@
+<?php
+/**
+ * Security-Sensitive Configuration Template
+ * 
+ * DEPLOYMENT INSTRUCTIONS:
+ * ========================
+ * 1. Copy this file to: public_html/php_api_config.php
+ *    (ONE LEVEL ABOVE public_html/tsp - your web root)
+ * 2. Rename from php_api_config.php_template to php_api_config.php
+ * 3. Fill in your actual credentials below (replace all YOUR_* placeholders)
+ * 4. Set secure permissions: chmod 600 ~/public_html/php_api_config.php
+ * 
+ * SECURITY WARNING:
+ * =================
+ * - This file must NEVER be committed to git repository
+ * - This file must be OUTSIDE your web root (public_html/tsp)
+ * - Only the PHP processes need access to this file
+ * - Use chmod 600 to prevent other users from reading it
+ * 
+ * FILE LOCATIONS:
+ * ===============
+ * This file:  public_html/php_api_config.php
+ * Web root:   public_html/tsp/
+ * API files:  public_html/tsp/api/counter/
+ */
+
+return [
+    // ========================================================================
+    // Database Credentials
+    // ========================================================================
+    // These credentials are used to connect to your MariaDB/MySQL database
+    // where page view counts are stored.
+    //
+    // You can find these values in your hosting control panel (cPanel, Plesk, etc.)
+    // under the "Databases" or "MySQL Databases" section.
+    
+    // Database server hostname
+    // --------------------------------------------------
+    // For most shared hosting providers, this is 'localhost'
+    // Some providers use: 'localhost:3306' or a specific hostname
+    // Check your hosting documentation if unsure
+    'host' => 'localhost',
+    
+    // Database name
+    // --------------------------------------------------
+    // The name of the database you created in your hosting control panel
+    // Format often includes your username prefix (e.g., 'username_dbname')
+    // Example: 'tomber_tspblog', 'myuser_blog', 'production_db'
+    'database' => 'YOUR_DATABASE_NAME',
+    
+    // Database username
+    // --------------------------------------------------
+    // The username that has access to the database above
+    // Often matches the database name on shared hosting
+    // Example: 'tomber_tspblog', 'myuser_blog', 'dbuser'
+    'username' => 'YOUR_DATABASE_USERNAME',
+    
+    // Database password
+    // --------------------------------------------------
+    // The password you set when creating the database user
+    // 
+    // SECURITY REQUIREMENTS:
+    // - Minimum 12 characters recommended
+    // - Mix of uppercase, lowercase, numbers, special characters
+    // - Do NOT reuse passwords from other services
+    // - Do NOT use common words or patterns
+    // 
+    // Example (DO NOT USE THIS): 'xK9$mL#2pN@v8qR'
+    'password' => 'YOUR_DATABASE_PASSWORD',
+    
+    // Character encoding
+    // --------------------------------------------------
+    // Leave as 'utf8mb4' for full Unicode support
+    // This enables proper handling of:
+    // - Emojis (👍, 🎉, etc.)
+    // - International characters (中文, العربية, עברית, etc.)
+    // - Special symbols
+    // 
+    // DO NOT CHANGE unless you have a specific reason and know what you're doing
+    'charset' => 'utf8mb4',
+    
+    // ========================================================================
+    // Admin Dashboard Security
+    // ========================================================================
+    
+    // Admin dashboard password
+    // --------------------------------------------------
+    // Used to access: https://thesystemicprogrammer.org/api/counter/admin.php
+    //
+    // PASSWORD REQUIREMENTS:
+    // - Minimum 12 characters (20+ recommended)
+    // - Use a mix of:
+    //   * Uppercase letters (A-Z)
+    //   * Lowercase letters (a-z)
+    //   * Numbers (0-9)
+    //   * Special characters (!@#$%^&*()_+-=[]{}|;:,.<>?)
+    // - Do NOT reuse passwords from other services
+    // - Do NOT use:
+    //   * Common words (password, admin, etc.)
+    //   * Personal information (name, birthday, etc.)
+    //   * Keyboard patterns (qwerty, 12345, etc.)
+    //
+    // TIPS FOR CREATING A STRONG PASSWORD:
+    // - Use a password manager (1Password, Bitwarden, LastPass, etc.)
+    // - Generate a random password with: pwgen -s 20 1
+    // - Use a passphrase: "correct-horse-battery-staple" style
+    //
+    // Example (DO NOT USE THIS): 'Xy9$mK#pL2@vN8qR3wT!'
+    'admin_password' => 'YOUR_ADMIN_PASSWORD',
+    
+    // ========================================================================
+    // VERIFICATION CHECKLIST
+    // ========================================================================
+    // Before saving this file, verify:
+    // [ ] All YOUR_* placeholders have been replaced with actual values
+    // [ ] Database credentials are correct (test connection if possible)
+    // [ ] Admin password meets security requirements above
+    // [ ] File will be saved to: ~/public_html/php_api_config.php
+    // [ ] File permissions will be set to: 600 (chmod 600)
+    // [ ] File is NOT in your git repository
+    // [ ] File is OUTSIDE your web root (not in public_html/tsp/)
+    //
+    // After saving, test:
+    // 1. Verify file exists:
+    //    ls -la ~/public_html/php_api_config.php
+    //
+    // 2. Verify permissions (should show -rw-------):
+    //    stat ~/public_html/php_api_config.php
+    //
+    // 3. Verify PHP syntax:
+    //    php -l ~/public_html/php_api_config.php
+    //    (should output: "No syntax errors detected")
+    //
+    // 4. Verify file is NOT web-accessible:
+    //    curl https://thesystemicprogrammer.org/../php_api_config.php
+    //    (should return: 403 Forbidden or 404 Not Found)
+    // ========================================================================
+];

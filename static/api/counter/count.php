@@ -27,7 +27,43 @@ header('Access-Control-Allow-Methods: GET, POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
 // Load configuration
-$config = require_once __DIR__ . '/db-config.php';
+try {
+    // Load security-sensitive credentials from outside web root
+    $credentialsFile = __DIR__ . '/../../../php_api_config.php';
+    if (!file_exists($credentialsFile)) {
+        throw new Exception('Configuration file not found. Please ensure php_api_config.php exists in the correct location.');
+    }
+    $credentials = require_once $credentialsFile;
+    
+    // Load API configuration
+    $apiConfig = require_once __DIR__ . '/config.php';
+    
+    // Merge configurations (credentials override any defaults)
+    $config = array_merge($apiConfig, $credentials);
+    
+    // Validate required credentials exist
+    $requiredFields = ['host', 'database', 'username', 'password'];
+    foreach ($requiredFields as $field) {
+        if (empty($config[$field])) {
+            throw new Exception("Required configuration field '$field' is missing.");
+        }
+    }
+    
+} catch (Exception $e) {
+    // Graceful error handling
+    $response = [
+        'success' => false,
+        'count' => 0,
+        'formatted' => '0',
+        'error' => 'Configuration error. Please contact the site administrator.'
+    ];
+    if (($config['debug_enabled'] ?? false) && isset($_GET['debug'])) {
+        $response['debug_error'] = $e->getMessage();
+    }
+    echo json_encode($response);
+    error_log('View counter config error: ' . $e->getMessage());
+    exit;
+}
 
 // Check debug mode
 $debugMode = $config['debug_enabled'] && isset($_GET['debug']);
