@@ -5,3 +5,4 @@ node_modules
 dist
 tmp
 secrets.txt
+package-lock.json
