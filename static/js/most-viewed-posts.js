@@ -74,11 +74,11 @@ function renderPosts(container, loadingElement, posts) {
  */
 function createPostCard(post) {
   return `
-    <a href="${escapeHtml(post.url)}" 
-       class="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 
+    <a href="${escapeHtml(post.page_id)}" 
+       class="block p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 
               transition-colors duration-200 border border-transparent 
               hover:border-gray-300 dark:hover:border-gray-600">
-      <div class="font-medium text-blue-600 dark:text-blue-400 hover:underline mb-1">
+      <div class="text-lg font-medium text-blue-600 dark:text-blue-400 hover:underline mb-1">
         ${escapeHtml(post.title)}
       </div>
       <div class="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400">
