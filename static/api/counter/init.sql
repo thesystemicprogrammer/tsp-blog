@@ -3,10 +3,17 @@
 -- Database: tomber_tspblog
 -- ============================================================================
 
+-- WARNING: Drop existing tables for fresh start
+-- Only run this if you want to reset all data!
+DROP TABLE IF EXISTS view_history;
+DROP TABLE IF EXISTS dedup_hashes;
+DROP TABLE IF EXISTS page_views;
+
 -- Table 1: Page view counts
 -- Stores aggregate view count for each page
 CREATE TABLE IF NOT EXISTS page_views (
     page_id VARCHAR(255) PRIMARY KEY,
+    title VARCHAR(500) NULL DEFAULT NULL,
     view_count INT UNSIGNED DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

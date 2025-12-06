@@ -17,7 +17,7 @@ session_start();
 // Load configuration
 try {
     // Load security-sensitive credentials from outside web root
-    $credentialsFile = __DIR__ . '/../../../php_api_config.php';
+    $credentialsFile = __DIR__ . '/../../../../php_api_config.php';
     if (!file_exists($credentialsFile)) {
         throw new Exception('Configuration file not found. Please ensure php_api_config.php exists in the correct location.');
     }

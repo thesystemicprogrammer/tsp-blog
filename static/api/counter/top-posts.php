@@ -13,7 +13,7 @@
  *     "count": 5,
  *     "posts": [
  *       {
- *         "url": "/posts/my-article/",
+ *         "page_id": "/posts/my-article/",
  *         "title": "My Article",
  *         "view_count": 1234,
  *         "formatted_count": "1,234",
@@ -32,7 +32,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 // Load configuration
 try {
     // Load security-sensitive credentials from outside web root
-    $credentialsFile = __DIR__ . '/../../../php_api_config.php';
+    $credentialsFile = __DIR__ . '/../../../../php_api_config.php';
     if (!file_exists($credentialsFile)) {
         throw new Exception('Configuration file not found. Please ensure php_api_config.php exists in the correct location.');
     }
@@ -209,7 +209,7 @@ function getDB($config) {
  */
 function getTopPosts($pdo, $limit) {
     $stmt = $pdo->prepare(
-        "SELECT page_id, view_count, created_at, last_updated 
+        "SELECT page_id, title, view_count, created_at, last_updated 
          FROM page_views 
          ORDER BY view_count DESC 
          LIMIT ?"
@@ -219,8 +219,8 @@ function getTopPosts($pdo, $limit) {
     $posts = [];
     while ($row = $stmt->fetch()) {
         $posts[] = [
-            'url' => $row['page_id'],
-            'title' => extractTitle($row['page_id']),
+            'page_id' => $row['page_id'],
+            'title' => $row['title'] ?? extractTitleFallback($row['page_id']),
             'view_count' => (int)$row['view_count'],
             'formatted_count' => number_format($row['view_count']),
             'date' => formatDate($row['created_at'])
@@ -231,14 +231,15 @@ function getTopPosts($pdo, $limit) {
 }
 
 /**
- * Extract title from page URL
+ * Extract title from page URL (FALLBACK ONLY)
  * 
+ * Used when database title is NULL (legacy posts or edge cases)
  * Converts /posts/my-article/ or /posts/2025-12-05-my-article/ to "My Article"
  * 
  * @param string $pageId Page URL path
  * @return string Formatted title
  */
-function extractTitle($pageId) {
+function extractTitleFallback($pageId) {
     // Extract filename from path: /posts/my-article/ → my-article
     $basename = basename(rtrim($pageId, '/'));
     

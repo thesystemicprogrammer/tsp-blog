@@ -9,8 +9,8 @@
  * - Random initial views (7-15) for new posts
  * 
  * Usage:
- *   GET  /api/counter/count.php?page=/posts/my-article/
- *   POST /api/counter/count.php with page parameter
+ *   GET  /api/counter/count.php?page=/posts/my-article/&title=My Article
+ *   POST /api/counter/count.php with page and title parameters
  * 
  * Response:
  *   {
@@ -29,7 +29,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 // Load configuration
 try {
     // Load security-sensitive credentials from outside web root
-    $credentialsFile = __DIR__ . '/../../../php_api_config.php';
+    $credentialsFile = __DIR__ . '/../../../../php_api_config.php';
     if (!file_exists($credentialsFile)) {
         throw new Exception('Configuration file not found. Please ensure php_api_config.php exists in the correct location.');
     }
@@ -88,10 +88,28 @@ try {
         throw new Exception('Missing page parameter');
     }
     
+    // Get title from request (optional for backward compatibility)
+    $title = $_GET['title'] ?? $_POST['title'] ?? null;
+    
     // Sanitize page ID
     $pageId = filter_var($pageId, FILTER_SANITIZE_URL);
     if (!$pageId || strlen($pageId) > 255) {
         throw new Exception('Invalid page parameter');
+    }
+    
+    // Sanitize title if provided
+    if ($title !== null) {
+        $title = trim($title);
+        // Remove any HTML tags for security
+        $title = strip_tags($title);
+        // Limit length to 500 characters (matches DB column)
+        if (strlen($title) > 500) {
+            $title = substr($title, 0, 500);
+        }
+        // If title is empty string after sanitization, set to null
+        if ($title === '') {
+            $title = null;
+        }
     }
     
     // Generate enhanced fingerprint hash
@@ -101,7 +119,7 @@ try {
     $pdo = getDB($config);
     
     // Increment view count (or return current if duplicate)
-    $count = incrementView($pdo, $pageId, $hash, $config);
+    $count = incrementView($pdo, $pageId, $hash, $config, $title);
     
     // Build successful response
     $response['success'] = true;
@@ -326,10 +344,11 @@ function getDB($config) {
  * @param string $pageId Page identifier
  * @param string $hash Deduplication hash
  * @param array $config Configuration array
+ * @param string|null $title Page title (optional, stored in database)
  * @return int Current view count
  * @throws Exception On database error
  */
-function incrementView($pdo, $pageId, $hash, $config) {
+function incrementView($pdo, $pageId, $hash, $config, $title = null) {
     try {
         $pdo->beginTransaction();
         
@@ -356,9 +375,9 @@ function incrementView($pdo, $pageId, $hash, $config) {
             $initialCount = rand($config['initial_views_min'], $config['initial_views_max']);
             
             $stmt = $pdo->prepare(
-                "INSERT INTO page_views (page_id, view_count) VALUES (?, ?)"
+                "INSERT INTO page_views (page_id, title, view_count) VALUES (?, ?, ?)"
             );
-            $stmt->execute([$pageId, $initialCount]);
+            $stmt->execute([$pageId, $title, $initialCount]);
             
             // Now add the current view (+1)
             $newCount = $initialCount + 1;
@@ -369,11 +388,22 @@ function incrementView($pdo, $pageId, $hash, $config) {
             $stmt->execute([$newCount, $pageId]);
             
         } else {
-            // Existing page - increment by 1
-            $stmt = $pdo->prepare(
-                "UPDATE page_views SET view_count = view_count + 1 WHERE page_id = ?"
-            );
-            $stmt->execute([$pageId]);
+            // Existing page - increment by 1 and update title
+            if ($title !== null) {
+                // Update both count and title
+                $stmt = $pdo->prepare(
+                    "UPDATE page_views 
+                     SET view_count = view_count + 1, title = ? 
+                     WHERE page_id = ?"
+                );
+                $stmt->execute([$title, $pageId]);
+            } else {
+                // Update only count
+                $stmt = $pdo->prepare(
+                    "UPDATE page_views SET view_count = view_count + 1 WHERE page_id = ?"
+                );
+                $stmt->execute([$pageId]);
+            }
             
             $newCount = $currentCount + 1;
         }
