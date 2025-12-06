@@ -5,7 +5,7 @@
  * NON-SENSITIVE PARAMETERS ONLY
  * ==============================
  * Database credentials and admin password are loaded from:
- * public_html/php_api_config.php (outside web root)
+ * ~/php_api_config.php (OUTSIDE the public_html web root)
  * 
  * This file contains API behavior settings that are safe to version control.
  * 
@@ -20,7 +20,7 @@ return [
     // Database Credentials - LOADED FROM EXTERNAL FILE
     // ========================================================================
     // The following database credentials are loaded from php_api_config.php
-    // (located outside the web root at: public_html/php_api_config.php)
+    // (located OUTSIDE the web root at: ~/php_api_config.php)
     //
     // Fields loaded from external file:
     // - host         Database server hostname (usually 'localhost')
@@ -86,7 +86,7 @@ return [
     // Admin Dashboard - PASSWORD LOADED FROM EXTERNAL FILE
     // ========================================================================
     // The admin_password is loaded from php_api_config.php
-    // (located outside the web root at: public_html/php_api_config.php)
+    // (located OUTSIDE the web root at: ~/php_api_config.php)
     //
     // This password protects access to:
     // https://thesystemicprogrammer.org/api/counter/admin.php

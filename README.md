@@ -163,13 +163,84 @@ params:
 
 ### View Counter Setup
 
-The view counter is a custom PHP/MySQL solution. See [`static/api/counter/README.md`](static/api/counter/README.md) for detailed setup instructions.
+The view counter is a custom PHP/MySQL solution that requires secure configuration before deployment.
+
+#### Quick Setup Guide
+
+**1. Create Secure Credentials File**
+
+Before deploying, you must create a configuration file **outside your web root** with your database credentials and admin password.
+
+**File Location:**
+```
+~/php_api_config.php
+```
+(This is **outside and one level above** your web root directory `public_html`)
+
+**Template:** Copy from `static/api/counter/php_api_config.php_template`
+
+**Required Configuration Keys:**
+
+| Key | Description | Where to Find | Example |
+|-----|-------------|---------------|---------|
+| `host` | Database server hostname | Usually `localhost` for shared hosting | `localhost` |
+| `database` | Database name | cPanel → MySQL Databases | `username_blogdb` |
+| `username` | Database username | cPanel → MySQL Databases | `username_blogdb` |
+| `password` | Database password | Set when creating DB user | `YourSecureDbPass123!` |
+| `charset` | Character encoding | Leave as `utf8mb4` | `utf8mb4` |
+| `admin_password` | Admin dashboard password | Create a strong password (12+ chars) | `AdminSecure456!@#` |
+
+**Example Configuration:**
+```php
+<?php
+return [
+    // Database Credentials
+    'host' => 'localhost',
+    'database' => 'username_blogdb',
+    'username' => 'username_blogdb',
+    'password' => 'YourSecureDbPass123!',
+    'charset' => 'utf8mb4',
+    
+    // Admin Dashboard Security
+    'admin_password' => 'AdminSecure456!@#',
+];
+```
+
+**2. Set Secure Permissions**
+
+```bash
+chmod 600 ~/php_api_config.php
+```
+
+**3. Verify Security**
+
+```bash
+# Check file exists outside web root
+ls -la ~/php_api_config.php
+
+# Should show: -rw------- (600 permissions)
+
+# Verify NOT web-accessible (should return 403/404)
+curl https://yourdomain.com/../php_api_config.php
+```
+
+**4. Deploy & Test**
+
+After deployment, visit `/api/counter/admin.php` with your admin password to verify the setup.
+
+For complete setup instructions, database initialization, and troubleshooting, see [`static/api/counter/README.md`](static/api/counter/README.md).
 
 **Key Features:**
 - GDPR compliant (no personal data stored)
 - Bot filtering
 - 15-minute deduplication
 - Admin dashboard at `/api/counter/admin.php`
+
+**Security Notes:**
+- Never commit `php_api_config.php` to git
+- Store it **outside** your web root
+- Use strong, unique passwords for both database and admin access
+- Verify file permissions are `600` (owner read/write only)
 
 ## 📦 Deployment
 
