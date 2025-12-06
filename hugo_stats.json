@@ -169,6 +169,7 @@
       "sm:flex-row",
       "sm:px-6",
       "space-x-4",
+      "space-y-1",
       "space-y-2",
       "space-y-3",
       "space-y-6",
