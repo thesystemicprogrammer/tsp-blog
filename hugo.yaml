@@ -14,7 +14,7 @@ params:
   description: "The Systemic Programmer - Exploring software development through the lens of systems thinking. Insights on architecture, best practices, and how code components interact to create robust solutions."
   social:
     github: "https://github.com/thesystemicprogrammer"
-    linkedin: "https://linkedin.com/in/yourusername"
+    linkedin: "https://www.linkedin.com/in/thomas-berchtold"
 
 build:
   buildStats:
