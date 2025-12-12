@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:hugo": "hugo --minify",
+    "build:pagefind": "npx pagefind --site public",
+    "build": "npm run build:hugo && npm run build:pagefind",
+    "dev": "hugo server -D"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +16,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.17",
+    "pagefind": "^1.4.0",
     "tailwindcss": "^4.1.17"
   }
 }

@@ -16,6 +16,23 @@ params:
     github: "https://github.com/thesystemicprogrammer"
     linkedin: "https://www.linkedin.com/in/thomas-berchtold"
 
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+      wrapStandAloneImageWithinParagraph: false
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+          - - \[
+            - \]
+          inline:
+          - - \[
+            - \]
+
 build:
   buildStats:
     enable: true

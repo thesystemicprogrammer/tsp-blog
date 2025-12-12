@@ -1,5 +1,9 @@
 {{ define "main" }}
-<article class="max-w-4xl mx-auto px-4 pt-14 pb-8 sm:px-6 lg:px-8">
+<article class="max-w-4xl mx-auto px-4 pt-14 pb-8 sm:px-6 lg:px-8" 
+         data-pagefind-body
+         {{ with .Params.categories }}data-categories="{{ delimit . "," }}"{{ end }}
+         {{ with .Params.tags }}data-tags="{{ delimit . "," }}"{{ end }}
+         data-date="{{ .Date.Format "January 2, 2006" }}">
   <!-- Article Header -->
   <header class="mb-8 border-b border-gray-200 dark:border-gray-700 pb-8">
     <h1 class="text-4xl font-bold mb-4 leading-tight">{{ .Title }}</h1>

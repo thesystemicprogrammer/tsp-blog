@@ -38,7 +38,7 @@ The missing piece revealed itself years later, in the most unexpected way.
 
 I had decided to pursue a [Master's degree in Software Engineering at the Open University](https://www.open.ac.uk/postgraduate/qualifications/f66) in Milton Keynes. The OU was perfect for my situation—I could balance a demanding career and family life while still pursuing advanced education. The program itself was excellent, with great tutors and a curriculum that covered everything you'd expect: advanced software architecture, formal methods, project management.
 
-But it was two modules that weren't strictly about software engineering that changed everything: [Systems Thinking in Practice](https://www.open.ac.uk/postgraduate/modules/tb871/) and its follow-up module, [Systems Thinking](https://www.open.ac.uk/postgraduate/modules/tb872/). I almost didn't take them—they seemed tangential to my goal of becoming a better software engineer.
+But it was two modules that weren't strictly about software engineering that changed everything: [Systems Thinking in Practice](https://www.open.ac.uk/postgraduate/modules/tb871/) and its follow-up module, [Managing Change with Systems Thinking in Practice](https://www.open.ac.uk/postgraduate/modules/tb872/). I almost didn't take them—they seemed tangential to my goal of becoming a better software engineer.
 
 Thank goodness I did.
 
@@ -152,8 +152,8 @@ Thanks for joining me on this journey. Welcome to The Systemic Programmer.
 1. **[Agile Manifesto](https://agilemanifesto.org)** - The original 2001 Manifesto for Agile Software Development, signed by Kent Beck, Martin Fowler, Robert C. Martin, Dave Thomas, and 13 others.
 2. **[Rational Unified Process](https://en.wikipedia.org/wiki/Rational_unified_process)** - Wikipedia's comprehensive overview of RUP, the iterative software development process framework created by Rational Software. Covers the four phases (Inception, Elaboration, Construction, Transition) and six best practices.
 3. **[Master's in Software Engineering - Open University](https://www.open.ac.uk/postgraduate/qualifications/f66)** - The MSc in Computing with specialization in Software Engineering program at The Open University, Milton Keynes, UK.
-4. [Systems Thinking in Practice (TU811)](https://www.open.ac.uk/postgraduate/modules/tb871/)** - Open University module introducing systems thinking approaches and their practical application.
-5. **[Systems Thinking (TU872)](https://www.open.ac.uk/postgraduate/modules/tb872/)** - Advanced Open University module on systems thinking theory and practice.
+4. **[Systems Thinking in Practice (TU811)](https://www.open.ac.uk/postgraduate/modules/tb871/)** - Open University module introducing systems thinking approaches and their practical application.
+5. **[Managing Change with Systems Thinking in Practice (TU872)](https://www.open.ac.uk/postgraduate/modules/tb872/)** - Advanced Open University module on systems thinking theory and practice.
 6. **[The Cynefin Framework](https://thecynefin.co/about-us/about-cynefin-framework/)** - Official resource from The Cynefin Company (founded by Dave Snowden) about the framework for decision-making in complex contexts. Distinguishes between simple, complicated, complex, and chaotic domains.
 7. **[Wicked Problems](https://en.wikipedia.org/wiki/Wicked_problem)** - Wikipedia article on wicked problems—problems that are difficult or impossible to solve due to incomplete, contradictory, and changing requirements. Based on the original 1973 work by Horst Rittel and Melvin M. Webber.
 8. **[Agile is Dead (Long Live Agility)](https://pragdave.me/thoughts/active/2014-03-04-time-to-kill-agile.html)** - Dave Thomas's influential 2014 blog post arguing that the word "agile" has been corrupted by the methodology industry, and calling for a return to agility as a set of principles rather than prescribed practices.

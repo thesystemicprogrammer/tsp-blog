@@ -1,0 +1,46 @@
+{{- $alertIcons := dict
+  "note" "ℹ️"
+  "abstract" "📄"
+  "summary" "📄"
+  "tldr" "📄"
+  "info" "ℹ️"
+  "todo" "✅"
+  "tip" "💡"
+  "hint" "💡"
+  "important" "🔥"
+  "success" "✅"
+  "check" "✅"
+  "done" "✅"
+  "question" "❓"
+  "help" "❓"
+  "faq" "❓"
+  "warning" "⚠️"
+  "caution" "⚠️"
+  "attention" "⚠️"
+  "failure" "❌"
+  "fail" "❌"
+  "missing" "❌"
+  "danger" "⚡"
+  "error" "⚡"
+  "bug" "🐛"
+  "example" "📝"
+  "quote" "💬"
+  "cite" "💬"
+-}}
+
+{{- if .AlertType -}}
+  {{- $icon := index $alertIcons .AlertType -}}
+<div class="alert alert-{{ .AlertType }}">
+  <div class="alert-header">
+    <span class="alert-icon">{{ $icon }}</span>
+    <span class="alert-title">{{ or .AlertTitle (title .AlertType) }}</span>
+  </div>
+  <div class="alert-content">
+    {{- .Text | safeHTML -}}
+  </div>
+</div>
+{{- else -}}
+<blockquote>
+  {{- .Text | safeHTML -}}
+</blockquote>
+{{- end -}}

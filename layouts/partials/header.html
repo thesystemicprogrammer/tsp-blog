@@ -39,6 +39,9 @@
       <div class="flex items-center gap-4 sm:gap-6 w-full sm:w-auto justify-between sm:justify-end">
         {{ partial "nav.html" . }}
         <div class="flex items-center gap-3">
+          <a href="/search/" class="no-focus-ring hover:opacity-80 transition-opacity text-white" aria-label="Search">
+            {{- partial "icon.html" (dict "name" "search" "size" "24") -}}
+          </a>
           {{- if .Site.Params.social.github -}}
           <a href="{{ .Site.Params.social.github }}" target="_blank" rel="noopener noreferrer" class="no-focus-ring hover:opacity-80 transition-opacity" aria-label="GitHub">
             {{- partial "icon.html" (dict "name" "brand-github" "size" "24") -}}

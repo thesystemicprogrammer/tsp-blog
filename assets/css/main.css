@@ -63,6 +63,236 @@
   @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic my-6 text-gray-700 dark:text-gray-400;
 }
 
+/* GitHub-style alerts */
+.article-content .alert {
+  @apply my-6 p-4 rounded-lg border-l-4 not-italic;
+}
+
+.article-content .alert-header {
+  @apply flex items-center gap-2 mb-2;
+}
+
+.article-content .alert-icon {
+  @apply text-lg leading-none;
+}
+
+.article-content .alert-title {
+  @apply text-xl font-bold;
+}
+
+.article-content .alert-content {
+  @apply ml-0;
+}
+
+.article-content .alert-content p {
+  @apply mb-4;
+}
+
+.article-content .alert-content p:last-child {
+  @apply mb-0;
+}
+
+/* Note, Info - Blue */
+.article-content .alert-note,
+.article-content .alert-info {
+  @apply bg-blue-50 dark:bg-blue-950/30 border-blue-500;
+}
+
+.article-content .alert-note .alert-header,
+.article-content .alert-info .alert-header {
+  @apply text-blue-700 dark:text-blue-300;
+}
+
+.article-content .alert-note .alert-content,
+.article-content .alert-info .alert-content {
+  @apply text-blue-900 dark:text-blue-100;
+}
+
+/* Abstract, Summary, TLDR - Cyan */
+.article-content .alert-abstract,
+.article-content .alert-summary,
+.article-content .alert-tldr {
+  @apply bg-cyan-50 dark:bg-cyan-950/30 border-cyan-500;
+}
+
+.article-content .alert-abstract .alert-header,
+.article-content .alert-summary .alert-header,
+.article-content .alert-tldr .alert-header {
+  @apply text-cyan-700 dark:text-cyan-300;
+}
+
+.article-content .alert-abstract .alert-content,
+.article-content .alert-summary .alert-content,
+.article-content .alert-tldr .alert-content {
+  @apply text-cyan-900 dark:text-cyan-100;
+}
+
+/* Todo, Success, Check, Done - Green */
+.article-content .alert-todo,
+.article-content .alert-success,
+.article-content .alert-check,
+.article-content .alert-done {
+  @apply bg-green-50 dark:bg-green-950/30 border-green-500;
+}
+
+.article-content .alert-todo .alert-header,
+.article-content .alert-success .alert-header,
+.article-content .alert-check .alert-header,
+.article-content .alert-done .alert-header {
+  @apply text-green-700 dark:text-green-300;
+}
+
+.article-content .alert-todo .alert-content,
+.article-content .alert-success .alert-content,
+.article-content .alert-check .alert-content,
+.article-content .alert-done .alert-content {
+  @apply text-green-900 dark:text-green-100;
+}
+
+/* Tip, Hint - Green (lighter shade) */
+.article-content .alert-tip,
+.article-content .alert-hint {
+  @apply bg-emerald-50 dark:bg-emerald-950/30 border-emerald-500;
+}
+
+.article-content .alert-tip .alert-header,
+.article-content .alert-hint .alert-header {
+  @apply text-emerald-700 dark:text-emerald-300;
+}
+
+.article-content .alert-tip .alert-content,
+.article-content .alert-hint .alert-content {
+  @apply text-emerald-900 dark:text-emerald-100;
+}
+
+/* Question, Help, FAQ - Purple */
+.article-content .alert-question,
+.article-content .alert-help,
+.article-content .alert-faq {
+  @apply bg-purple-50 dark:bg-purple-950/30 border-purple-500;
+}
+
+.article-content .alert-question .alert-header,
+.article-content .alert-help .alert-header,
+.article-content .alert-faq .alert-header {
+  @apply text-purple-700 dark:text-purple-300;
+}
+
+.article-content .alert-question .alert-content,
+.article-content .alert-help .alert-content,
+.article-content .alert-faq .alert-content {
+  @apply text-purple-900 dark:text-purple-100;
+}
+
+/* Important - Orange */
+.article-content .alert-important {
+  @apply bg-orange-50 dark:bg-orange-950/30 border-orange-500;
+}
+
+.article-content .alert-important .alert-header {
+  @apply text-orange-700 dark:text-orange-300;
+}
+
+.article-content .alert-important .alert-content {
+  @apply text-orange-900 dark:text-orange-100;
+}
+
+/* Warning, Caution, Attention - Yellow */
+.article-content .alert-warning,
+.article-content .alert-caution,
+.article-content .alert-attention {
+  @apply bg-yellow-50 dark:bg-yellow-950/30 border-yellow-500;
+}
+
+.article-content .alert-warning .alert-header,
+.article-content .alert-caution .alert-header,
+.article-content .alert-attention .alert-header {
+  @apply text-yellow-700 dark:text-yellow-300;
+}
+
+.article-content .alert-warning .alert-content,
+.article-content .alert-caution .alert-content,
+.article-content .alert-attention .alert-content {
+  @apply text-yellow-900 dark:text-yellow-100;
+}
+
+/* Failure, Fail, Missing - Red */
+.article-content .alert-failure,
+.article-content .alert-fail,
+.article-content .alert-missing {
+  @apply bg-red-50 dark:bg-red-950/30 border-red-500;
+}
+
+.article-content .alert-failure .alert-header,
+.article-content .alert-fail .alert-header,
+.article-content .alert-missing .alert-header {
+  @apply text-red-700 dark:text-red-300;
+}
+
+.article-content .alert-failure .alert-content,
+.article-content .alert-fail .alert-content,
+.article-content .alert-missing .alert-content {
+  @apply text-red-900 dark:text-red-100;
+}
+
+/* Danger, Error - Dark Red */
+.article-content .alert-danger,
+.article-content .alert-error {
+  @apply bg-rose-50 dark:bg-rose-950/30 border-rose-600;
+}
+
+.article-content .alert-danger .alert-header,
+.article-content .alert-error .alert-header {
+  @apply text-rose-700 dark:text-rose-300;
+}
+
+.article-content .alert-danger .alert-content,
+.article-content .alert-error .alert-content {
+  @apply text-rose-900 dark:text-rose-100;
+}
+
+/* Bug - Pink */
+.article-content .alert-bug {
+  @apply bg-pink-50 dark:bg-pink-950/30 border-pink-500;
+}
+
+.article-content .alert-bug .alert-header {
+  @apply text-pink-700 dark:text-pink-300;
+}
+
+.article-content .alert-bug .alert-content {
+  @apply text-pink-900 dark:text-pink-100;
+}
+
+/* Example - Indigo */
+.article-content .alert-example {
+  @apply bg-indigo-50 dark:bg-indigo-950/30 border-indigo-500;
+}
+
+.article-content .alert-example .alert-header {
+  @apply text-indigo-700 dark:text-indigo-300;
+}
+
+.article-content .alert-example .alert-content {
+  @apply text-indigo-900 dark:text-indigo-100;
+}
+
+/* Quote, Cite - Gray */
+.article-content .alert-quote,
+.article-content .alert-cite {
+  @apply bg-gray-50 dark:bg-gray-800/30 border-gray-500;
+}
+
+.article-content .alert-quote .alert-header,
+.article-content .alert-cite .alert-header {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.article-content .alert-quote .alert-content,
+.article-content .alert-cite .alert-content {
+  @apply text-gray-900 dark:text-gray-100;
+}
+
 .article-content ul {
   @apply my-6 list-disc list-inside;
 }
@@ -228,4 +458,105 @@ a:focus-visible, button:focus-visible {
   font-weight: 900;
   font-style: italic;
   font-display: swap;
+}
+
+/* Search Page Styles */
+
+/* Autocomplete dropdown */
+.autocomplete-item {
+  @apply px-4 py-3 cursor-pointer transition-colors border-b border-gray-100 dark:border-gray-700;
+}
+
+.autocomplete-item:last-child {
+  @apply border-b-0;
+}
+
+.autocomplete-item:hover,
+.autocomplete-item.selected {
+  @apply bg-blue-50 dark:bg-blue-900/30;
+}
+
+.autocomplete-item-title {
+  @apply text-gray-900 dark:text-gray-100 font-medium flex items-center gap-2;
+}
+
+.autocomplete-item-type {
+  @apply text-sm text-gray-500 dark:text-gray-400 ml-7;
+}
+
+/* Search result card (matches post-card styling) */
+.search-result-card {
+  @apply border border-gray-200 dark:border-gray-700 rounded-lg p-6 
+         bg-white dark:bg-gray-800 shadow-sm hover:shadow-md 
+         hover:border-blue-500 dark:hover:border-blue-400 
+         transition-all duration-200;
+}
+
+.search-result-title {
+  @apply text-2xl font-bold mb-3;
+}
+
+.search-result-title a {
+  @apply no-underline;
+}
+
+.search-result-excerpt {
+  @apply text-gray-700 dark:text-gray-300 mb-4 leading-relaxed;
+}
+
+/* Search term highlighting in excerpts */
+.search-result-excerpt mark {
+  @apply bg-blue-200 dark:bg-blue-800 text-gray-900 dark:text-gray-100 
+         px-1 rounded font-medium;
+}
+
+/* Filter badges */
+.filter-badge {
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium 
+         transition-all cursor-pointer border-2 border-transparent;
+}
+
+.filter-badge-category,
+.filter-badge-tag {
+  @apply bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200 
+         hover:bg-blue-100 dark:hover:bg-blue-900 hover:border-blue-300 dark:hover:border-blue-700;
+}
+
+.filter-badge-category.active,
+.filter-badge-tag.active {
+  @apply bg-blue-600 text-white dark:bg-blue-500 border-blue-600 dark:border-blue-500 
+         hover:bg-blue-700 dark:hover:bg-blue-600;
+}
+
+/* Loading state */
+.search-loading {
+  @apply text-center py-12 text-gray-500 dark:text-gray-400;
+}
+
+/* Empty state */
+.search-empty {
+  @apply text-center py-12;
+}
+
+.search-empty-icon {
+  @apply text-6xl mb-4;
+}
+
+.search-empty-title {
+  @apply text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2;
+}
+
+.search-empty-description {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+/* Spinning animation for loading */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
