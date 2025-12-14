@@ -3,7 +3,7 @@ title: 'Organise yourself with Taskwarrior'
 date: 2025-12-07T22:11:49+01:00
 # created: YYYY-MM-DDTHH:MM:SS+TZ (uncomment and set to show both created and updated dates)
 slug: 'introduction-takswarrior' 
-draft: false 
+draft: true 
 pinned: false
 categories: 
 - productivity
